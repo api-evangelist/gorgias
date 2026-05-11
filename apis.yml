@@ -1,0 +1,74 @@
+aid: gorgias
+name: Gorgias
+description: >-
+  Gorgias is a customer support and helpdesk platform purpose-built for
+  ecommerce brands, with deep native integrations into Shopify, BigCommerce,
+  Magento, and other commerce stacks to unify email, chat, social, SMS, and
+  voice conversations alongside order data. The platform automates repetitive
+  support tasks with AI agents and macros, surfaces revenue attribution for
+  support interactions, and powers self-service flows on storefronts. The
+  Gorgias REST API provides full CRUD access to tickets, customers, macros,
+  integrations, and widgets using HTTP Basic authentication or OAuth2 for
+  public apps.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Customer Support
+  - Helpdesk
+  - Ecommerce
+  - Shopify
+  - Tickets
+  - Conversations
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: gorgias:rest-api
+    name: Gorgias REST API
+    description: >-
+      REST API for managing tickets, messages, customers, macros, rules,
+      integrations, widgets, and account data inside the Gorgias helpdesk.
+      Authentication uses HTTP Basic with an email and API key for private
+      apps, or OAuth2 for public apps. Requests are scoped to a customer
+      subdomain on gorgias.com.
+    humanURL: https://developers.gorgias.com/reference/introduction
+    baseURL: https://{subdomain}.gorgias.com/api
+    tags:
+      - Customer Support
+      - Helpdesk
+      - Tickets
+      - Customers
+      - Macros
+      - Integrations
+    properties:
+      - type: Documentation
+        url: https://developers.gorgias.com/reference/introduction
+      - type: Getting Started
+        url: https://developers.gorgias.com/docs
+      - type: Authentication
+        url: https://developers.gorgias.com/docs/access-tokens-api-keys
+      - type: Changelog
+        url: https://developers.gorgias.com/changelog
+
+common:
+  - type: Website
+    url: https://www.gorgias.com
+  - type: Documentation
+    url: https://developers.gorgias.com
+  - type: Help Center
+    url: https://docs.gorgias.com/en-US
+  - type: Pricing
+    url: https://www.gorgias.com/pricing
+  - type: Sign Up
+    url: https://www.gorgias.com/signup
+  - type: Status
+    url: https://status.gorgias.com
+  - type: Changelog
+    url: https://developers.gorgias.com/changelog
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/gorgiasio
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
