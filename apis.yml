@@ -45,11 +45,11 @@ apis:
     properties:
       - type: Documentation
         url: https://developers.gorgias.com/reference/introduction
-      - type: Getting Started
+      - type: GettingStarted
         url: https://developers.gorgias.com/docs
       - type: Authentication
         url: https://developers.gorgias.com/docs/access-tokens-api-keys
-      - type: Changelog
+      - type: ChangeLog
         url: https://developers.gorgias.com/changelog
 
 common:
@@ -61,11 +61,11 @@ common:
     url: https://docs.gorgias.com/en-US
   - type: Pricing
     url: https://www.gorgias.com/pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://www.gorgias.com/signup
-  - type: Status
+  - type: StatusPage
     url: https://status.gorgias.com
-  - type: Changelog
+  - type: ChangeLog
     url: https://developers.gorgias.com/changelog
   - type: LinkedIn
     url: https://www.linkedin.com/company/gorgiasio
