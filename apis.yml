@@ -53,6 +53,8 @@ apis:
         url: https://developers.gorgias.com/changelog
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/gorgias
   - type: Website
     url: https://www.gorgias.com
   - type: Documentation
