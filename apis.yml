@@ -71,6 +71,8 @@ common:
     url: https://developers.gorgias.com/changelog
   - type: LinkedIn
     url: https://www.linkedin.com/company/gorgiasio
+  - type: LLMsTxt
+    url: https://developers.gorgias.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
