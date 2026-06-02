@@ -1,0 +1,346 @@
+asyncapi: '2.6.0'
+id: 'urn:com:gorgias:webhooks'
+info:
+  title: Gorgias Webhooks (HTTP Integrations)
+  version: '2024-01-01'
+  description: >-
+    Best-effort AsyncAPI 2.6 description of the Gorgias webhook surface,
+    delivered through Gorgias HTTP Integrations. When the configured triggers
+    fire inside a Gorgias account, Gorgias performs an HTTP request to the
+    URL configured on the TicketHttpIntegration, optionally rendering the
+    `url`, `headers`, and request body via the Jinja-style templating
+    language (e.g. `{{ticket.id}}`, `{{ticket.customer.email}}`). This
+    document models that outbound delivery as an AsyncAPI channel per
+    supported trigger.
+
+
+    Triggers documented here are sourced from the Gorgias developer
+    documentation for HTTP Integrations and the TicketHttpIntegration object.
+    Payload shape is whatever the integration owner configures in their
+    integration definition; the `messages` below describe the available
+    template context (Ticket, Message) rather than a fixed payload schema.
+  contact:
+    name: Gorgias Developers
+    url: https://developers.gorgias.com
+  license:
+    name: Proprietary
+    url: https://www.gorgias.com/legal/terms
+  termsOfService: https://www.gorgias.com/legal/terms
+
+defaultContentType: application/json
+
+servers:
+  subscriber:
+    url: '{subscriberUrl}'
+    protocol: https
+    description: >-
+      Customer-hosted HTTPS endpoint that receives webhook deliveries from a
+      Gorgias HTTP Integration. This URL is configured on the
+      TicketHttpIntegration `http.url` field inside the Gorgias account and
+      may include templated variables that Gorgias renders at delivery time.
+    variables:
+      subscriberUrl:
+        default: https://example.com/webhooks/gorgias
+        description: HTTPS URL that Gorgias should POST events to.
+
+channels:
+  ticket-created:
+    description: >-
+      Fires when a new ticket is created in the Gorgias account. The HTTP
+      integration must have `triggers.ticket-created` set to true.
+    subscribe:
+      operationId: onTicketCreated
+      summary: A ticket was created.
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/TicketEvent'
+
+  ticket-updated:
+    description: >-
+      Fires when any field on a ticket changes (e.g. subject, priority,
+      tags, custom fields). The HTTP integration must have
+      `triggers.ticket-updated` set to true.
+    subscribe:
+      operationId: onTicketUpdated
+      summary: A ticket was updated.
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/TicketEvent'
+
+  ticket-status-updated:
+    description: >-
+      Fires when the `status` field on a ticket changes (open, closed).
+      The HTTP integration must have `triggers.ticket-status-updated`
+      set to true.
+    subscribe:
+      operationId: onTicketStatusUpdated
+      summary: A ticket status changed.
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/TicketEvent'
+
+  ticket-assignment-updated:
+    description: >-
+      Fires when the assignee (`assignee_user` or `assignee_team`) on a
+      ticket changes. The HTTP integration must have
+      `triggers.ticket-assignment-updated` set to true.
+    subscribe:
+      operationId: onTicketAssignmentUpdated
+      summary: Ticket assignee changed.
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/TicketEvent'
+
+  ticket-handed-over:
+    description: >-
+      Fires when a ticket is handed over (for example handed from an AI
+      agent or self-service flow to a human agent). The HTTP integration
+      must have `triggers.ticket-handed-over` set to true.
+    subscribe:
+      operationId: onTicketHandedOver
+      summary: A ticket was handed over.
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/TicketEvent'
+
+  ticket-self-unsnoozed:
+    description: >-
+      Fires when a ticket auto-unsnoozes because its snooze duration has
+      expired. The HTTP integration must have
+      `triggers.ticket-self-unsnoozed` set to true.
+    subscribe:
+      operationId: onTicketSelfUnsnoozed
+      summary: A ticket unsnoozed itself.
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/TicketEvent'
+
+  ticket-message-created:
+    description: >-
+      Fires when a new message is added to a ticket (inbound or outbound).
+      The HTTP integration must have `triggers.ticket-message-created`
+      set to true.
+    subscribe:
+      operationId: onTicketMessageCreated
+      summary: A message was added to a ticket.
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/TicketMessageEvent'
+
+  ticket-message-failed:
+    description: >-
+      Fires when delivery of an outbound message on a ticket fails. The
+      HTTP integration must have `triggers.ticket-message-failed` set
+      to true.
+    subscribe:
+      operationId: onTicketMessageFailed
+      summary: A ticket message failed to send.
+      bindings:
+        http:
+          type: request
+          method: POST
+          bindingVersion: '0.3.0'
+      message:
+        $ref: '#/components/messages/TicketMessageEvent'
+
+components:
+  messages:
+    TicketEvent:
+      name: TicketEvent
+      title: Ticket trigger payload
+      summary: >-
+        Templated payload generated from a TicketHttpIntegration. The actual
+        body is whatever the integration owner configured; the schema below
+        describes the Ticket context available to the template.
+      contentType: application/json
+      payload:
+        $ref: '#/components/schemas/TicketHttpIntegrationContext'
+
+    TicketMessageEvent:
+      name: TicketMessageEvent
+      title: Ticket-message trigger payload
+      summary: >-
+        Templated payload generated from a TicketHttpIntegration for
+        message-scoped triggers. The actual body is whatever the integration
+        owner configured; the schema below describes the Ticket and Message
+        context available to the template.
+      contentType: application/json
+      payload:
+        $ref: '#/components/schemas/TicketMessageHttpIntegrationContext'
+
+  schemas:
+    TicketHttpIntegrationContext:
+      type: object
+      description: >-
+        Subset of fields from the Gorgias TicketHttpIntegration object that
+        are available as template variables (e.g. `{{ticket.id}}`,
+        `{{ticket.customer.email}}`) when Gorgias renders the outbound
+        request for ticket-scoped triggers.
+      properties:
+        ticket:
+          $ref: '#/components/schemas/Ticket'
+
+    TicketMessageHttpIntegrationContext:
+      type: object
+      description: >-
+        Template context for message-scoped triggers. Exposes both the
+        parent ticket and the message that triggered the event.
+      properties:
+        ticket:
+          $ref: '#/components/schemas/Ticket'
+        message:
+          $ref: '#/components/schemas/Message'
+
+    Ticket:
+      type: object
+      description: >-
+        Gorgias ticket object as exposed to HTTP integration templates.
+        Mirrors the Ticket schema from the Gorgias REST API.
+      properties:
+        id:
+          type: integer
+        external_id:
+          type: string
+          nullable: true
+        status:
+          type: string
+          enum: [open, closed]
+        priority:
+          type: string
+          enum: [low, normal, high, urgent]
+        channel:
+          type: string
+        via:
+          type: string
+        subject:
+          type: string
+        snippet:
+          type: string
+        customer:
+          $ref: '#/components/schemas/Customer'
+        assignee_user:
+          type: object
+          nullable: true
+        assignee_team:
+          type: object
+          nullable: true
+        tags:
+          type: array
+          items:
+            type: object
+        messages_count:
+          type: integer
+        created_datetime:
+          type: string
+          format: date-time
+        updated_datetime:
+          type: string
+          format: date-time
+
+    Message:
+      type: object
+      description: >-
+        Gorgias message object as exposed to HTTP integration templates.
+        Mirrors the Message schema from the Gorgias REST API.
+      properties:
+        id:
+          type: integer
+        uri:
+          type: string
+        message_id:
+          type: string
+        ticket_id:
+          type: integer
+        external_id:
+          type: string
+          nullable: true
+        public:
+          type: boolean
+        channel:
+          type: string
+        via:
+          type: string
+        sender:
+          type: object
+        receiver:
+          type: object
+        body_text:
+          type: string
+        body_html:
+          type: string
+        attachments:
+          type: array
+          items:
+            type: object
+        from_agent:
+          type: boolean
+        created_datetime:
+          type: string
+          format: date-time
+        sent_datetime:
+          type: string
+          format: date-time
+
+    Customer:
+      type: object
+      description: >-
+        Gorgias customer object as exposed to HTTP integration templates.
+      properties:
+        id:
+          type: integer
+        external_id:
+          type: string
+          nullable: true
+        firstname:
+          type: string
+        lastname:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        language:
+          type: string
+        timezone:
+          type: string
+        channels:
+          type: array
+          items:
+            type: object
+        meta:
+          type: object
+        created_datetime:
+          type: string
+          format: date-time
+        updated_datetime:
+          type: string
+          format: date-time

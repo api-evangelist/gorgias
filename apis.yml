@@ -22,7 +22,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
   - aid: gorgias:rest-api
@@ -51,6 +51,34 @@ apis:
         url: https://developers.gorgias.com/docs/access-tokens-api-keys
       - type: ChangeLog
         url: https://developers.gorgias.com/changelog
+      - type: OpenAPI
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/openapi/gorgias-openapi.yml
+  - aid: gorgias:webhooks
+    name: Gorgias Webhooks
+    description: >-
+      Outbound webhook surface delivered through Gorgias HTTP Integrations.
+      When configured triggers fire on a Gorgias account, Gorgias sends an
+      HTTP request to the URL set on the TicketHttpIntegration, with the
+      request URL, headers, and body rendered from a Jinja-style template
+      that exposes the related ticket, message, and customer context.
+      Supported triggers include ticket-created, ticket-updated,
+      ticket-status-updated, ticket-assignment-updated, ticket-handed-over,
+      ticket-self-unsnoozed, ticket-message-created, and
+      ticket-message-failed.
+    humanURL: https://developers.gorgias.com/reference/the-tickethttpintegration-object
+    tags:
+      - Webhooks
+      - Events
+      - HTTP Integration
+      - Tickets
+      - Messages
+    properties:
+      - type: Documentation
+        url: https://developers.gorgias.com/reference/the-tickethttpintegration-object
+      - type: AsyncAPI
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/asyncapi/gorgias-asyncapi.yml
 
 common:
   - type: GitHubOrganization
