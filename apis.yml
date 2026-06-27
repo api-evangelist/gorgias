@@ -91,7 +91,7 @@ common:
     url: https://docs.gorgias.com/en-US
   - type: Pricing
     url: https://www.gorgias.com/pricing
-  - type: SignUp
+  - type: Signup
     url: https://www.gorgias.com/signup
   - type: StatusPage
     url: https://status.gorgias.com
@@ -99,7 +99,7 @@ common:
     url: https://developers.gorgias.com/changelog
   - type: LinkedIn
     url: https://www.linkedin.com/company/gorgiasio
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://developers.gorgias.com/llms.txt
 maintainers:
   - FN: Kin Lane
