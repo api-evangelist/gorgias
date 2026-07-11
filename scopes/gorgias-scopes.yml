@@ -1,0 +1,47 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/gorgias-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/gorgias-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://{account}.gorgias.com/oauth/authorize
+    tokenUrl: https://{account}.gorgias.com/oauth/token
+scopes:
+- scope: accounts.read
+  description: Read account
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/gorgias-openapi.yml
+- scope: customers.read
+  description: Read customers
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/gorgias-openapi.yml
+- scope: customers.write
+  description: Write customers
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/gorgias-openapi.yml
+- scope: openid
+  description: OpenID
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/gorgias-openapi.yml
+- scope: tickets.read
+  description: Read tickets
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/gorgias-openapi.yml
+- scope: tickets.write
+  description: Write tickets
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/gorgias-openapi.yml

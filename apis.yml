@@ -81,6 +81,10 @@ apis:
           https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/asyncapi/gorgias-asyncapi.yml
 
 common:
+  - type: OAuthScopes
+    url: scopes/gorgias-scopes.yml
+  - url: https://www.gorgias.com/blog
+    type: Blog
   - type: GitHubOrganization
     url: https://github.com/gorgias
   - type: Website
