@@ -1,0 +1,25 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/gorgias-openapi.yml
+summary:
+  types:
+  - http
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: Use account email as username and API key as password
+  sources:
+  - openapi/gorgias-openapi.yml
+- name: oauth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://{account}.gorgias.com/oauth/authorize
+    tokenUrl: https://{account}.gorgias.com/oauth/token
+    scopes: 6
+  sources:
+  - openapi/gorgias-openapi.yml

@@ -81,6 +81,12 @@ apis:
           https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/asyncapi/gorgias-asyncapi.yml
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/gorgias-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/gorgias-domain-security.yml
+  - type: Authentication
+    url: authentication/gorgias-authentication.yml
   - type: OAuthScopes
     url: scopes/gorgias-scopes.yml
   - url: https://www.gorgias.com/blog
