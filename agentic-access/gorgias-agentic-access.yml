@@ -1,0 +1,1005 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/gorgias-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 49
+  by_action_class:
+    connected: 23
+    acting: 26
+  by_consequence:
+    read: 23
+    write: 26
+  human_in_the_loop_required: 0
+operations:
+- path: /api/account
+  method: get
+  operationId: getAccount
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/account/settings
+  method: get
+  operationId: getAccountSettings
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/account/settings
+  method: put
+  operationId: updateAccountSettings
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/customers
+  method: get
+  operationId: listCustomers
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/customers
+  method: post
+  operationId: createCustomer
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/customers/{id}
+  method: get
+  operationId: getCustomer
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/customers/{id}
+  method: put
+  operationId: updateCustomer
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/customers/{id}
+  method: delete
+  operationId: deleteCustomer
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tickets
+  method: get
+  operationId: listTickets
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tickets
+  method: post
+  operationId: createTicket
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tickets/{id}
+  method: get
+  operationId: getTicket
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tickets/{id}
+  method: put
+  operationId: updateTicket
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tickets/{id}
+  method: delete
+  operationId: deleteTicket
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tickets/{id}/messages
+  method: get
+  operationId: listTicketMessages
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tickets/{id}/messages
+  method: post
+  operationId: createTicketMessage
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tickets/{id}/tags
+  method: post
+  operationId: addTicketTags
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tags
+  method: get
+  operationId: listTags
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tags
+  method: post
+  operationId: createTag
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tags/{id}
+  method: get
+  operationId: getTag
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tags/{id}
+  method: put
+  operationId: updateTag
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/tags/{id}
+  method: delete
+  operationId: deleteTag
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/macros
+  method: get
+  operationId: listMacros
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/macros
+  method: post
+  operationId: createMacro
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/macros/{id}
+  method: get
+  operationId: getMacro
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/macros/{id}
+  method: put
+  operationId: updateMacro
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/macros/{id}
+  method: delete
+  operationId: deleteMacro
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/rules
+  method: get
+  operationId: listRules
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/rules
+  method: post
+  operationId: createRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/rules/{id}
+  method: get
+  operationId: getRule
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/rules/{id}
+  method: put
+  operationId: updateRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/rules/{id}
+  method: delete
+  operationId: deleteRule
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/views
+  method: get
+  operationId: listViews
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/views
+  method: post
+  operationId: createView
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/views/{id}/items
+  method: get
+  operationId: searchViewItems
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/integrations
+  method: get
+  operationId: listIntegrations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/integrations
+  method: post
+  operationId: createIntegration
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/integrations/{id}
+  method: get
+  operationId: getIntegration
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/integrations/{id}
+  method: put
+  operationId: updateIntegration
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/integrations/{id}
+  method: delete
+  operationId: deleteIntegration
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/users
+  method: get
+  operationId: listUsers
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/users
+  method: post
+  operationId: createUser
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/users/{id}
+  method: get
+  operationId: getUser
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/teams
+  method: get
+  operationId: listTeams
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/teams
+  method: post
+  operationId: createTeam
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/satisfaction-surveys
+  method: get
+  operationId: listSatisfactionSurveys
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/satisfaction-surveys
+  method: post
+  operationId: createSatisfactionSurvey
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/widgets
+  method: get
+  operationId: listWidgets
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/widgets
+  method: post
+  operationId: createWidget
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write
+- path: /api/widgets/{id}
+  method: get
+  operationId: getWidget
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - accounts.read
+    - customers.read
+    - customers.write
+    - openid
+    - tickets.read
+    - tickets.write

@@ -81,6 +81,8 @@ apis:
           https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/asyncapi/gorgias-asyncapi.yml
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/gorgias-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/gorgias-vulnerability-disclosure.yml
   - type: DomainSecurity
