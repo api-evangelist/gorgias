@@ -1,0 +1,97 @@
+openapi: 3.1.0
+info:
+  title: Gorgias REST Account Views API
+  description: Best-effort OpenAPI 3.1 for the Gorgias REST API, covering tickets, messages, customers, integrations, macros, rules, tags, teams, users, views, surveys, and widgets. Gorgias uses per-account subdomains ({account}.gorgias.com) and supports HTTP Basic authentication with an API key or OAuth2 for public apps.
+  version: '2024-01-01'
+servers:
+- url: https://{account}.gorgias.com
+  variables:
+    account:
+      default: example
+      description: Account subdomain
+security:
+- basicAuth: []
+- oauth2:
+  - openid
+  - accounts.read
+  - tickets.read
+  - tickets.write
+  - customers.read
+  - customers.write
+tags:
+- name: Views
+paths:
+  /api/views:
+    get:
+      tags:
+      - Views
+      summary: List views
+      operationId: listViews
+      responses:
+        '200':
+          description: Views
+    post:
+      tags:
+      - Views
+      summary: Create view
+      operationId: createView
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: View
+  /api/views/{id}/items:
+    get:
+      tags:
+      - Views
+      summary: Search items in a view
+      operationId: searchViewItems
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      - $ref: '#/components/parameters/Cursor'
+      - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Items
+components:
+  parameters:
+    Cursor:
+      name: cursor
+      in: query
+      schema:
+        type: string
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 30
+        maximum: 100
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: Use account email as username and API key as password
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://{account}.gorgias.com/oauth/authorize
+          tokenUrl: https://{account}.gorgias.com/oauth/token
+          scopes:
+            openid: OpenID
+            accounts.read: Read account
+            tickets.read: Read tickets
+            tickets.write: Write tickets
+            customers.read: Read customers
+            customers.write: Write customers

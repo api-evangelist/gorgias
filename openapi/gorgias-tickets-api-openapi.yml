@@ -1,0 +1,241 @@
+openapi: 3.1.0
+info:
+  title: Gorgias REST Account Tickets API
+  description: Best-effort OpenAPI 3.1 for the Gorgias REST API, covering tickets, messages, customers, integrations, macros, rules, tags, teams, users, views, surveys, and widgets. Gorgias uses per-account subdomains ({account}.gorgias.com) and supports HTTP Basic authentication with an API key or OAuth2 for public apps.
+  version: '2024-01-01'
+servers:
+- url: https://{account}.gorgias.com
+  variables:
+    account:
+      default: example
+      description: Account subdomain
+security:
+- basicAuth: []
+- oauth2:
+  - openid
+  - accounts.read
+  - tickets.read
+  - tickets.write
+  - customers.read
+  - customers.write
+tags:
+- name: Tickets
+paths:
+  /api/tickets:
+    get:
+      tags:
+      - Tickets
+      summary: List tickets
+      operationId: listTickets
+      parameters:
+      - $ref: '#/components/parameters/Cursor'
+      - $ref: '#/components/parameters/Limit'
+      - in: query
+        name: customer_id
+        schema:
+          type: integer
+      - in: query
+        name: assignee_user_id
+        schema:
+          type: integer
+      - in: query
+        name: status
+        schema:
+          type: string
+          enum:
+          - open
+          - closed
+      responses:
+        '200':
+          description: Tickets
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Ticket'
+                  meta:
+                    $ref: '#/components/schemas/Meta'
+    post:
+      tags:
+      - Tickets
+      summary: Create ticket
+      operationId: createTicket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ticket'
+      responses:
+        '201':
+          description: Created
+  /api/tickets/{id}:
+    get:
+      tags:
+      - Tickets
+      summary: Retrieve a ticket
+      operationId: getTicket
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Ticket
+    put:
+      tags:
+      - Tickets
+      summary: Update a ticket
+      operationId: updateTicket
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ticket'
+      responses:
+        '200':
+          description: Ticket
+    delete:
+      tags:
+      - Tickets
+      summary: Delete a ticket
+      operationId: deleteTicket
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '204':
+          description: Deleted
+components:
+  schemas:
+    Meta:
+      type: object
+      properties:
+        next_cursor:
+          type: string
+          nullable: true
+        previous_cursor:
+          type: string
+          nullable: true
+    Ticket:
+      type: object
+      properties:
+        id:
+          type: integer
+        external_id:
+          type: string
+          nullable: true
+        status:
+          type: string
+          enum:
+          - open
+          - closed
+        priority:
+          type: string
+          enum:
+          - low
+          - normal
+          - high
+          - urgent
+        channel:
+          type: string
+        via:
+          type: string
+        subject:
+          type: string
+        snippet:
+          type: string
+        customer:
+          $ref: '#/components/schemas/Customer'
+        assignee_user:
+          type: object
+          nullable: true
+        assignee_team:
+          type: object
+          nullable: true
+        tags:
+          type: array
+          items:
+            type: object
+        messages_count:
+          type: integer
+        created_datetime:
+          type: string
+          format: date-time
+        updated_datetime:
+          type: string
+          format: date-time
+    Customer:
+      type: object
+      properties:
+        id:
+          type: integer
+        external_id:
+          type: string
+          nullable: true
+        firstname:
+          type: string
+        lastname:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        language:
+          type: string
+        timezone:
+          type: string
+        channels:
+          type: array
+          items:
+            type: object
+        meta:
+          type: object
+        created_datetime:
+          type: string
+          format: date-time
+        updated_datetime:
+          type: string
+          format: date-time
+  parameters:
+    Cursor:
+      name: cursor
+      in: query
+      schema:
+        type: string
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 30
+        maximum: 100
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: Use account email as username and API key as password
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://{account}.gorgias.com/oauth/authorize
+          tokenUrl: https://{account}.gorgias.com/oauth/token
+          scopes:
+            openid: OpenID
+            accounts.read: Read account
+            tickets.read: Read tickets
+            tickets.write: Write tickets
+            customers.read: Read customers
+            customers.write: Write customers

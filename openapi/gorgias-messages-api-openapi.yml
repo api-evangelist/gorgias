@@ -1,0 +1,126 @@
+openapi: 3.1.0
+info:
+  title: Gorgias REST Account Messages API
+  description: Best-effort OpenAPI 3.1 for the Gorgias REST API, covering tickets, messages, customers, integrations, macros, rules, tags, teams, users, views, surveys, and widgets. Gorgias uses per-account subdomains ({account}.gorgias.com) and supports HTTP Basic authentication with an API key or OAuth2 for public apps.
+  version: '2024-01-01'
+servers:
+- url: https://{account}.gorgias.com
+  variables:
+    account:
+      default: example
+      description: Account subdomain
+security:
+- basicAuth: []
+- oauth2:
+  - openid
+  - accounts.read
+  - tickets.read
+  - tickets.write
+  - customers.read
+  - customers.write
+tags:
+- name: Messages
+paths:
+  /api/tickets/{id}/messages:
+    get:
+      tags:
+      - Messages
+      summary: List messages for a ticket
+      operationId: listTicketMessages
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Messages
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Message'
+    post:
+      tags:
+      - Messages
+      summary: Create a message on a ticket
+      operationId: createTicketMessage
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Message'
+      responses:
+        '201':
+          description: Created
+components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+  schemas:
+    Message:
+      type: object
+      properties:
+        id:
+          type: integer
+        uri:
+          type: string
+        message_id:
+          type: string
+        ticket_id:
+          type: integer
+        external_id:
+          type: string
+          nullable: true
+        public:
+          type: boolean
+        channel:
+          type: string
+        via:
+          type: string
+        sender:
+          type: object
+        receiver:
+          type: object
+        body_text:
+          type: string
+        body_html:
+          type: string
+        attachments:
+          type: array
+          items:
+            type: object
+        from_agent:
+          type: boolean
+        created_datetime:
+          type: string
+          format: date-time
+        sent_datetime:
+          type: string
+          format: date-time
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: Use account email as username and API key as password
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://{account}.gorgias.com/oauth/authorize
+          tokenUrl: https://{account}.gorgias.com/oauth/token
+          scopes:
+            openid: OpenID
+            accounts.read: Read account
+            tickets.read: Read tickets
+            tickets.write: Write tickets
+            customers.read: Read customers
+            customers.write: Write customers
