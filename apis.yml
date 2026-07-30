@@ -11,7 +11,19 @@ description: >-
   integrations, and widgets using HTTP Basic authentication or OAuth2 for
   public apps.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gorgias.png
 tags:
   - Customer Support
   - Helpdesk
@@ -25,61 +37,262 @@ created: '2026-05-11'
 modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
-  - aid: gorgias:rest-api
-    name: Gorgias REST API
-    description: >-
-      REST API for managing tickets, messages, customers, macros, rules,
-      integrations, widgets, and account data inside the Gorgias helpdesk.
-      Authentication uses HTTP Basic with an email and API key for private
-      apps, or OAuth2 for public apps. Requests are scoped to a customer
-      subdomain on gorgias.com.
-    humanURL: https://developers.gorgias.com/reference/introduction
-    baseURL: https://{subdomain}.gorgias.com/api
-    tags:
-      - Customer Support
-      - Helpdesk
-      - Tickets
-      - Customers
-      - Macros
-      - Integrations
-    properties:
-      - type: Documentation
-        url: https://developers.gorgias.com/reference/introduction
-      - type: GettingStarted
-        url: https://developers.gorgias.com/docs
-      - type: Authentication
-        url: https://developers.gorgias.com/docs/access-tokens-api-keys
-      - type: ChangeLog
-        url: https://developers.gorgias.com/changelog
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/openapi/gorgias-openapi.yml
-  - aid: gorgias:webhooks
-    name: Gorgias Webhooks
-    description: >-
-      Outbound webhook surface delivered through Gorgias HTTP Integrations.
-      When configured triggers fire on a Gorgias account, Gorgias sends an
-      HTTP request to the URL set on the TicketHttpIntegration, with the
-      request URL, headers, and body rendered from a Jinja-style template
-      that exposes the related ticket, message, and customer context.
-      Supported triggers include ticket-created, ticket-updated,
-      ticket-status-updated, ticket-assignment-updated, ticket-handed-over,
-      ticket-self-unsnoozed, ticket-message-created, and
-      ticket-message-failed.
-    humanURL: https://developers.gorgias.com/reference/the-tickethttpintegration-object
-    tags:
-      - Webhooks
-      - Events
-      - HTTP Integration
-      - Tickets
-      - Messages
-    properties:
-      - type: Documentation
-        url: https://developers.gorgias.com/reference/the-tickethttpintegration-object
-      - type: AsyncAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/asyncapi/gorgias-asyncapi.yml
-
+- aid: gorgias:webhooks
+  name: Gorgias Webhooks
+  description: >-
+    Outbound webhook surface delivered through Gorgias HTTP Integrations. When configured triggers fire
+    on a Gorgias account, Gorgias sends an HTTP request to the URL set on the TicketHttpIntegration, with
+    the request URL, headers, and body rendered from a Jinja-style template that exposes the related ticket,
+    message, and customer context. Supported triggers include ticket-created, ticket-updated, ticket-status-updated,
+    ticket-assignment-updated, ticket-handed-over, ticket-self-unsnoozed, ticket-message-created, and
+    ticket-message-failed.
+  humanURL: https://developers.gorgias.com/reference/the-tickethttpintegration-object
+  tags:
+  - Webhooks
+  - Events
+  - HTTP Integration
+  - Tickets
+  - Messages
+  properties:
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/the-tickethttpintegration-object
+  - type: AsyncAPI
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/asyncapi/gorgias-asyncapi.yml
+- aid: gorgias:gorgias-account-api
+  name: Gorgias Account API
+  description: The Account API from Gorgias — 2 operation(s) for account.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Account
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-account-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-customers-api
+  name: Gorgias Customers API
+  description: The Customers API from Gorgias — 2 operation(s) for customers.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Customers
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-customers-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-integrations-api
+  name: Gorgias Integrations API
+  description: The Integrations API from Gorgias — 2 operation(s) for integrations.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Integrations
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-integrations-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-macros-api
+  name: Gorgias Macros API
+  description: The Macros API from Gorgias — 2 operation(s) for macros.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Macros
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-macros-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-messages-api
+  name: Gorgias Messages API
+  description: The Messages API from Gorgias — 1 operation(s) for messages.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Messages
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-messages-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-rules-api
+  name: Gorgias Rules API
+  description: The Rules API from Gorgias — 2 operation(s) for rules.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Rules
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-rules-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-surveys-api
+  name: Gorgias Surveys API
+  description: The Surveys API from Gorgias — 1 operation(s) for surveys.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Surveys
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-surveys-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-tags-api
+  name: Gorgias Tags API
+  description: The Tags API from Gorgias — 3 operation(s) for tags.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-tags-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-teams-api
+  name: Gorgias Teams API
+  description: The Teams API from Gorgias — 1 operation(s) for teams.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-teams-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-tickets-api
+  name: Gorgias Tickets API
+  description: The Tickets API from Gorgias — 2 operation(s) for tickets.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Tickets
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-tickets-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-users-api
+  name: Gorgias Users API
+  description: The Users API from Gorgias — 2 operation(s) for users.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-users-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-views-api
+  name: Gorgias Views API
+  description: The Views API from Gorgias — 2 operation(s) for views.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Views
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-views-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
+- aid: gorgias:gorgias-widgets-api
+  name: Gorgias Widgets API
+  description: The Widgets API from Gorgias — 2 operation(s) for widgets.
+  humanURL: https://developers.gorgias.com/reference/introduction
+  baseURL: https://{subdomain}.gorgias.com/api
+  tags:
+  - Widgets
+  properties:
+  - type: OpenAPI
+    url: openapi/gorgias-widgets-api-openapi.yml
+  - type: Documentation
+    url: https://developers.gorgias.com/reference/introduction
+  - type: GettingStarted
+    url: https://developers.gorgias.com/docs
+  - type: Authentication
+    url: https://developers.gorgias.com/docs/access-tokens-api-keys
+  - type: ChangeLog
+    url: https://developers.gorgias.com/changelog
 common:
   - type: AgenticAccess
     url: agentic-access/gorgias-agentic-access.yml
