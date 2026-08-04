@@ -1,0 +1,38 @@
+{
+  "provider": "gorgias",
+  "sources": [
+    "gorgias-account-api-openapi.yml",
+    "gorgias-customers-api-openapi.yml",
+    "gorgias-integrations-api-openapi.yml",
+    "gorgias-macros-api-openapi.yml",
+    "gorgias-messages-api-openapi.yml",
+    "gorgias-rules-api-openapi.yml",
+    "gorgias-surveys-api-openapi.yml",
+    "gorgias-tags-api-openapi.yml",
+    "gorgias-teams-api-openapi.yml",
+    "gorgias-tickets-api-openapi.yml",
+    "gorgias-users-api-openapi.yml",
+    "gorgias-views-api-openapi.yml",
+    "gorgias-widgets-api-openapi.yml"
+  ],
+  "outputs": [
+    "gorgias-account-api-openapi.yml",
+    "gorgias-customers-api-openapi.yml",
+    "gorgias-integrations-api-openapi.yml",
+    "gorgias-macros-api-openapi.yml",
+    "gorgias-messages-api-openapi.yml",
+    "gorgias-rules-api-openapi.yml",
+    "gorgias-surveys-api-openapi.yml",
+    "gorgias-tags-api-openapi.yml",
+    "gorgias-teams-api-openapi.yml",
+    "gorgias-tickets-api-openapi.yml",
+    "gorgias-users-api-openapi.yml",
+    "gorgias-views-api-openapi.yml",
+    "gorgias-widgets-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

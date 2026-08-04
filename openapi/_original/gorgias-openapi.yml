@@ -1,0 +1,702 @@
+openapi: 3.1.0
+info:
+  title: Gorgias REST API
+  description: >-
+    Best-effort OpenAPI 3.1 for the Gorgias REST API, covering tickets,
+    messages, customers, integrations, macros, rules, tags, teams, users,
+    views, surveys, and widgets. Gorgias uses per-account subdomains
+    ({account}.gorgias.com) and supports HTTP Basic authentication with an
+    API key or OAuth2 for public apps.
+  version: '2024-01-01'
+servers:
+  - url: https://{account}.gorgias.com
+    variables:
+      account:
+        default: example
+        description: Account subdomain
+security:
+  - basicAuth: []
+  - oauth2: [openid, accounts.read, tickets.read, tickets.write, customers.read, customers.write]
+tags:
+  - name: Account
+  - name: Customers
+  - name: Tickets
+  - name: Messages
+  - name: Tags
+  - name: Macros
+  - name: Rules
+  - name: Views
+  - name: Integrations
+  - name: Users
+  - name: Teams
+  - name: Surveys
+  - name: Widgets
+paths:
+  /api/account:
+    get:
+      tags: [Account]
+      summary: Retrieve account
+      operationId: getAccount
+      responses:
+        '200':
+          description: Account
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Account' }
+  /api/account/settings:
+    get:
+      tags: [Account]
+      summary: Retrieve account settings
+      operationId: getAccountSettings
+      responses:
+        '200': { description: Settings }
+    put:
+      tags: [Account]
+      summary: Update account settings
+      operationId: updateAccountSettings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '200': { description: Settings }
+
+  /api/customers:
+    get:
+      tags: [Customers]
+      summary: List customers
+      operationId: listCustomers
+      parameters:
+        - $ref: '#/components/parameters/Cursor'
+        - $ref: '#/components/parameters/Limit'
+        - in: query
+          name: email
+          schema: { type: string }
+        - in: query
+          name: external_id
+          schema: { type: string }
+      responses:
+        '200':
+          description: Customers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items: { $ref: '#/components/schemas/Customer' }
+                  meta: { $ref: '#/components/schemas/Meta' }
+    post:
+      tags: [Customers]
+      summary: Create customer
+      operationId: createCustomer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Customer' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Customer' }
+  /api/customers/{id}:
+    get:
+      tags: [Customers]
+      summary: Retrieve a customer
+      operationId: getCustomer
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200': { description: Customer }
+    put:
+      tags: [Customers]
+      summary: Update a customer
+      operationId: updateCustomer
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Customer' }
+      responses:
+        '200': { description: Customer }
+    delete:
+      tags: [Customers]
+      summary: Delete a customer
+      operationId: deleteCustomer
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '204': { description: Deleted }
+
+  /api/tickets:
+    get:
+      tags: [Tickets]
+      summary: List tickets
+      operationId: listTickets
+      parameters:
+        - $ref: '#/components/parameters/Cursor'
+        - $ref: '#/components/parameters/Limit'
+        - in: query
+          name: customer_id
+          schema: { type: integer }
+        - in: query
+          name: assignee_user_id
+          schema: { type: integer }
+        - in: query
+          name: status
+          schema:
+            type: string
+            enum: [open, closed]
+      responses:
+        '200':
+          description: Tickets
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items: { $ref: '#/components/schemas/Ticket' }
+                  meta: { $ref: '#/components/schemas/Meta' }
+    post:
+      tags: [Tickets]
+      summary: Create ticket
+      operationId: createTicket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Ticket' }
+      responses:
+        '201': { description: Created }
+  /api/tickets/{id}:
+    get:
+      tags: [Tickets]
+      summary: Retrieve a ticket
+      operationId: getTicket
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200': { description: Ticket }
+    put:
+      tags: [Tickets]
+      summary: Update a ticket
+      operationId: updateTicket
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Ticket' }
+      responses:
+        '200': { description: Ticket }
+    delete:
+      tags: [Tickets]
+      summary: Delete a ticket
+      operationId: deleteTicket
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '204': { description: Deleted }
+
+  /api/tickets/{id}/messages:
+    get:
+      tags: [Messages]
+      summary: List messages for a ticket
+      operationId: listTicketMessages
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Messages
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items: { $ref: '#/components/schemas/Message' }
+    post:
+      tags: [Messages]
+      summary: Create a message on a ticket
+      operationId: createTicketMessage
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Message' }
+      responses:
+        '201': { description: Created }
+  /api/tickets/{id}/tags:
+    post:
+      tags: [Tags]
+      summary: Add tags to a ticket
+      operationId: addTicketTags
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tags:
+                  type: array
+                  items: { type: integer }
+      responses:
+        '200': { description: Tags }
+
+  /api/tags:
+    get:
+      tags: [Tags]
+      summary: List tags
+      operationId: listTags
+      responses:
+        '200': { description: Tags }
+    post:
+      tags: [Tags]
+      summary: Create tag
+      operationId: createTag
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Tag' }
+      responses:
+        '201': { description: Tag }
+  /api/tags/{id}:
+    get:
+      tags: [Tags]
+      summary: Get tag
+      operationId: getTag
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: Tag }
+    put:
+      tags: [Tags]
+      summary: Update tag
+      operationId: updateTag
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Tag' }
+      responses:
+        '200': { description: Tag }
+    delete:
+      tags: [Tags]
+      summary: Delete tag
+      operationId: deleteTag
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '204': { description: Deleted }
+
+  /api/macros:
+    get:
+      tags: [Macros]
+      summary: List macros
+      operationId: listMacros
+      responses:
+        '200': { description: Macros }
+    post:
+      tags: [Macros]
+      summary: Create macro
+      operationId: createMacro
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Macro' }
+      responses:
+        '201': { description: Macro }
+  /api/macros/{id}:
+    get:
+      tags: [Macros]
+      summary: Get macro
+      operationId: getMacro
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: Macro }
+    put:
+      tags: [Macros]
+      summary: Update macro
+      operationId: updateMacro
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Macro' }
+      responses:
+        '200': { description: Macro }
+    delete:
+      tags: [Macros]
+      summary: Delete macro
+      operationId: deleteMacro
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '204': { description: Deleted }
+
+  /api/rules:
+    get:
+      tags: [Rules]
+      summary: List rules
+      operationId: listRules
+      responses:
+        '200': { description: Rules }
+    post:
+      tags: [Rules]
+      summary: Create rule
+      operationId: createRule
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201': { description: Rule }
+  /api/rules/{id}:
+    get:
+      tags: [Rules]
+      summary: Get rule
+      operationId: getRule
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: Rule }
+    put:
+      tags: [Rules]
+      summary: Update rule
+      operationId: updateRule
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '200': { description: Rule }
+    delete:
+      tags: [Rules]
+      summary: Delete rule
+      operationId: deleteRule
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '204': { description: Deleted }
+
+  /api/views:
+    get:
+      tags: [Views]
+      summary: List views
+      operationId: listViews
+      responses:
+        '200': { description: Views }
+    post:
+      tags: [Views]
+      summary: Create view
+      operationId: createView
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201': { description: View }
+  /api/views/{id}/items:
+    get:
+      tags: [Views]
+      summary: Search items in a view
+      operationId: searchViewItems
+      parameters:
+        - $ref: '#/components/parameters/Id'
+        - $ref: '#/components/parameters/Cursor'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200': { description: Items }
+
+  /api/integrations:
+    get:
+      tags: [Integrations]
+      summary: List integrations
+      operationId: listIntegrations
+      responses:
+        '200': { description: Integrations }
+    post:
+      tags: [Integrations]
+      summary: Create integration
+      operationId: createIntegration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201': { description: Integration }
+  /api/integrations/{id}:
+    get:
+      tags: [Integrations]
+      summary: Get integration
+      operationId: getIntegration
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: Integration }
+    put:
+      tags: [Integrations]
+      summary: Update integration
+      operationId: updateIntegration
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '200': { description: Integration }
+    delete:
+      tags: [Integrations]
+      summary: Delete integration
+      operationId: deleteIntegration
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '204': { description: Deleted }
+
+  /api/users:
+    get:
+      tags: [Users]
+      summary: List users
+      operationId: listUsers
+      responses:
+        '200': { description: Users }
+    post:
+      tags: [Users]
+      summary: Create user
+      operationId: createUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201': { description: User }
+  /api/users/{id}:
+    get:
+      tags: [Users]
+      summary: Get user
+      operationId: getUser
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: User }
+
+  /api/teams:
+    get:
+      tags: [Teams]
+      summary: List teams
+      operationId: listTeams
+      responses:
+        '200': { description: Teams }
+    post:
+      tags: [Teams]
+      summary: Create team
+      operationId: createTeam
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201': { description: Team }
+
+  /api/satisfaction-surveys:
+    get:
+      tags: [Surveys]
+      summary: List satisfaction surveys
+      operationId: listSatisfactionSurveys
+      responses:
+        '200': { description: Surveys }
+    post:
+      tags: [Surveys]
+      summary: Create satisfaction survey
+      operationId: createSatisfactionSurvey
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201': { description: Survey }
+
+  /api/widgets:
+    get:
+      tags: [Widgets]
+      summary: List widgets
+      operationId: listWidgets
+      responses:
+        '200': { description: Widgets }
+    post:
+      tags: [Widgets]
+      summary: Create widget
+      operationId: createWidget
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201': { description: Widget }
+  /api/widgets/{id}:
+    get:
+      tags: [Widgets]
+      summary: Get widget
+      operationId: getWidget
+      parameters: [{ $ref: '#/components/parameters/Id' }]
+      responses:
+        '200': { description: Widget }
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: Use account email as username and API key as password
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://{account}.gorgias.com/oauth/authorize
+          tokenUrl: https://{account}.gorgias.com/oauth/token
+          scopes:
+            openid: OpenID
+            accounts.read: Read account
+            tickets.read: Read tickets
+            tickets.write: Write tickets
+            customers.read: Read customers
+            customers.write: Write customers
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema: { type: integer }
+    Cursor:
+      name: cursor
+      in: query
+      schema: { type: string }
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 30
+        maximum: 100
+  schemas:
+    Meta:
+      type: object
+      properties:
+        next_cursor: { type: string, nullable: true }
+        previous_cursor: { type: string, nullable: true }
+    Account:
+      type: object
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        domain: { type: string }
+    Customer:
+      type: object
+      properties:
+        id: { type: integer }
+        external_id: { type: string, nullable: true }
+        firstname: { type: string }
+        lastname: { type: string }
+        name: { type: string }
+        email: { type: string, format: email }
+        language: { type: string }
+        timezone: { type: string }
+        channels:
+          type: array
+          items: { type: object }
+        meta: { type: object }
+        created_datetime: { type: string, format: date-time }
+        updated_datetime: { type: string, format: date-time }
+    Ticket:
+      type: object
+      properties:
+        id: { type: integer }
+        external_id: { type: string, nullable: true }
+        status:
+          type: string
+          enum: [open, closed]
+        priority:
+          type: string
+          enum: [low, normal, high, urgent]
+        channel: { type: string }
+        via: { type: string }
+        subject: { type: string }
+        snippet: { type: string }
+        customer: { $ref: '#/components/schemas/Customer' }
+        assignee_user:
+          type: object
+          nullable: true
+        assignee_team:
+          type: object
+          nullable: true
+        tags:
+          type: array
+          items: { type: object }
+        messages_count: { type: integer }
+        created_datetime: { type: string, format: date-time }
+        updated_datetime: { type: string, format: date-time }
+    Message:
+      type: object
+      properties:
+        id: { type: integer }
+        uri: { type: string }
+        message_id: { type: string }
+        ticket_id: { type: integer }
+        external_id: { type: string, nullable: true }
+        public: { type: boolean }
+        channel: { type: string }
+        via: { type: string }
+        sender: { type: object }
+        receiver: { type: object }
+        body_text: { type: string }
+        body_html: { type: string }
+        attachments:
+          type: array
+          items: { type: object }
+        from_agent: { type: boolean }
+        created_datetime: { type: string, format: date-time }
+        sent_datetime: { type: string, format: date-time }
+    Tag:
+      type: object
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        decoration:
+          type: object
+          properties:
+            color: { type: string }
+        created_datetime: { type: string, format: date-time }
+        updated_datetime: { type: string, format: date-time }
+    Macro:
+      type: object
+      properties:
+        id: { type: integer }
+        name: { type: string }
+        description: { type: string }
+        actions:
+          type: array
+          items: { type: object }
+        created_datetime: { type: string, format: date-time }
+        updated_datetime: { type: string, format: date-time }
