@@ -1,0 +1,109 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gorgias REST Account Rules API",
+    "version": "2024-01-01"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Rules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{account}.gorgias.com/api/rules"
+          },
+          "docs": "List rules"
+        },
+        {
+          "info": {
+            "name": "Create rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{account}.gorgias.com/api/rules",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create rule"
+        },
+        {
+          "info": {
+            "name": "Get rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{account}.gorgias.com/api/rules/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get rule"
+        },
+        {
+          "info": {
+            "name": "Update rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{account}.gorgias.com/api/rules/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update rule"
+        },
+        {
+          "info": {
+            "name": "Delete rule",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{account}.gorgias.com/api/rules/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete rule"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

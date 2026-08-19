@@ -1,0 +1,177 @@
+# gorgias-developers Documentation
+
+> Gorgias Developer Portal. REST API reference and Guides.
+
+## Guides
+- [OAuth2 Scopes](https://developers.gorgias.com/docs/oauth2-scopes.md): OAuth2 scopes allow to limit your app's access to Gorgias user’s account data.
+- [Overview](https://developers.gorgias.com/docs/overview.md)
+- [Building a high-quality Gorgias app](https://developers.gorgias.com/docs/building-a-high-quality-gorgias-app.md)
+- [1. Register on Developer Portal & Get Gorgias Sandbox Account](https://developers.gorgias.com/docs/1-register-on-developer-portal.md)
+- [5. Submit app for review](https://developers.gorgias.com/docs/5-submit-app-for-review.md)
+- [OAuth2 authentication for creating apps with Gorgias](https://developers.gorgias.com/docs/oauth2-authentication-for-creating-apps-with-gorgias.md)
+- [Create a ticket using API](https://developers.gorgias.com/docs/create-a-ticket-using-api.md)
+- [Create a new message in ticket via API](https://developers.gorgias.com/docs/create-a-new-message-in-ticket-via-api.md)
+- [Create integrations and widgets](https://developers.gorgias.com/docs/create-integrations-and-widgets-programmatically.md)
+- [Refresh Shopify Cart’s UI on Updates via Convert](https://developers.gorgias.com/docs/how-to-attach-gorgias-tracking-data-to-shopify-cart-and-checkout-attributes-copy.md)
+
+## API Reference
+- [Errors](https://developers.gorgias.com/reference/errors.md)
+- [Pagination](https://developers.gorgias.com/reference/pagination.md)
+- [Rate Limits](https://developers.gorgias.com/reference/limitations.md)
+- [The Account object](https://developers.gorgias.com/reference/the-account-object.md)
+- [Retrieve your account](https://developers.gorgias.com/reference/get-account.md)
+- [List settings](https://developers.gorgias.com/reference/list-account-settings.md): List account settings matching the given parameters, paginated.
+- [Create a setting](https://developers.gorgias.com/reference/create-account-setting.md): Create a setting for the current account.
+- [Update a setting](https://developers.gorgias.com/reference/update-account-setting.md): Update a setting for the current account.
+- [The Customer object](https://developers.gorgias.com/reference/the-customer-object.md)
+- [Delete customers](https://developers.gorgias.com/reference/delete-customers.md)
+- [List customers](https://developers.gorgias.com/reference/list-customers.md): List customers, paginated, and ordered by their name (alphabetical order).
+- [Create a customer](https://developers.gorgias.com/reference/create-customer.md)
+- [Merge two customers](https://developers.gorgias.com/reference/merge-customers.md): Merge two customers according to the data sent in the payload. The data of the source customer will be merged into the target customer and then deleted. In case both customers have data for the same integration a conflict will occur with the API returning an error.
+- [List customer field values](https://developers.gorgias.com/reference/list-customer-custom-fields-values.md): List all custom fields for a customer.
+- [Update customer fields values](https://developers.gorgias.com/reference/update-customer-custom-field-values.md): Update a customer's custom fields values.
+- [Delete customer field value](https://developers.gorgias.com/reference/delete-customer-custom-field-value.md): Delete a customer's custom field value.
+- [Update customer field value](https://developers.gorgias.com/reference/update-customer-custom-field-value.md): Update a customer's custom field value.
+- [Set customer data](https://developers.gorgias.com/reference/update-customer-data.md): Set a customer's data.
+- [Delete a customer](https://developers.gorgias.com/reference/delete-customer.md)
+- [Retrieve a customer](https://developers.gorgias.com/reference/get-customer.md)
+- [Update a customer](https://developers.gorgias.com/reference/update-customer.md)
+- [The CustomField object](https://developers.gorgias.com/reference/the-customfield-object.md)
+- [List custom fields](https://developers.gorgias.com/reference/list-custom-fields.md): List custom fields matching the given parameters, paginated, and ordered.
+- [Create a custom field](https://developers.gorgias.com/reference/create-custom-field.md)
+- [Bulk update a list of custom fields](https://developers.gorgias.com/reference/update-custom-fields.md)
+- [Retrieve a custom field](https://developers.gorgias.com/reference/get-custom-field.md)
+- [Update a custom field](https://developers.gorgias.com/reference/update-custom-field.md)
+- [The Event object](https://developers.gorgias.com/reference/the-event-object.md)
+- [List events](https://developers.gorgias.com/reference/list-events.md): List events, paginated, and ordered by their creation date, with the most recently created first.
+- [Retrieve an event](https://developers.gorgias.com/reference/get-event.md)
+- [The File object](https://developers.gorgias.com/reference/the-file-object.md)
+- [Upload files](https://developers.gorgias.com/reference/post_api-upload.md): You can upload several files at a time by adding parameters to the root of the request body. The name of each parameter will be used as the label of the file once uploaded. E.g:   - parameter name: `package-damaged.png`   - parameter value: Content of the file.
+- [Download a file](https://developers.gorgias.com/reference/download-file.md): Download a private file given its resource identifier. The identifier can be extracted from the URL of an attachment by removing the domain part and keeping the rest.
+- [The Integration object](https://developers.gorgias.com/reference/the-integration-object.md)
+- [The TicketHttpIntegration object](https://developers.gorgias.com/reference/the-tickethttpintegration-object.md)
+- [List integrations](https://developers.gorgias.com/reference/list-integrations.md): List integrations matching the given parameters, paginated.
+- [Create an integration](https://developers.gorgias.com/reference/create-integration.md)
+- [Delete an integration](https://developers.gorgias.com/reference/delete-integration.md): Delete an integration. Any views that use this integration will be deactivated. Integrations currently used in rules and/or other integrations cannot be deleted.
+- [Retrieve an integration](https://developers.gorgias.com/reference/get-integration.md)
+- [Update an integration](https://developers.gorgias.com/reference/update-integration.md)
+- [The Job object](https://developers.gorgias.com/reference/the-job-object.md)
+- [List jobs](https://developers.gorgias.com/reference/list-jobs.md): List jobs, paginated and ordered by their creation date, with the most recent ones first.
+- [Create a job](https://developers.gorgias.com/reference/create-job.md): Create a job and schedule its execution. Jobs are processed asynchronously, meaning that once a job is created, it will run in background on Gorgias's servers. According to the type and size of the task, a job can take a few minutes or several hours to be executed. You can use our API to check the status of the job.
+- [Cancel a job](https://developers.gorgias.com/reference/cancel-job.md): Jobs can be canceled at any time but be aware that if a job already started, changes done by this one won't be reverted. For example, if you created a job to close 10k tickets and you cancel it at some point, these closed tickets won't be reopened.
+- [Retrieve a job](https://developers.gorgias.com/reference/get-job.md)
+- [Update a job](https://developers.gorgias.com/reference/update-job.md)
+- [The Macro object](https://developers.gorgias.com/reference/the-macro-object.md)
+- [List macros](https://developers.gorgias.com/reference/list-macros.md)
+- [Create a macro](https://developers.gorgias.com/reference/create-macro.md)
+- [Archive macros](https://developers.gorgias.com/reference/bulk-archive-macros.md)
+- [Unarchive macros](https://developers.gorgias.com/reference/bulk-unarchive-macros.md)
+- [Delete a macro](https://developers.gorgias.com/reference/delete-macro.md)
+- [Retrieve a macro](https://developers.gorgias.com/reference/get-macro.md)
+- [Update a macro](https://developers.gorgias.com/reference/update-macro.md)
+- [Retrieve a metric card by slug](https://developers.gorgias.com/reference/get-metric-card.md)
+- [Search metric cards](https://developers.gorgias.com/reference/search-metric-cards.md)
+- [Submit feedback on a metric card definition](https://developers.gorgias.com/reference/create-metric-card-feedback.md)
+- [The Rule object](https://developers.gorgias.com/reference/the-rule-object.md)
+- [List rules](https://developers.gorgias.com/reference/list-rules.md): List rules, paginated.
+- [Create a rule](https://developers.gorgias.com/reference/create-rule.md)
+- [Update rules' priorities](https://developers.gorgias.com/reference/update-rules-priorities.md)
+- [Delete a rule](https://developers.gorgias.com/reference/delete-rule.md)
+- [Retrieve a rule](https://developers.gorgias.com/reference/get-rule.md)
+- [Update a rule](https://developers.gorgias.com/reference/update-rule.md)
+- [The SatisfactionSurvey object](https://developers.gorgias.com/reference/the-satisfactionsurvey-object.md)
+- [List surveys](https://developers.gorgias.com/reference/list-satisfaction-surveys.md): List surveys, paginated and ordered by their creation date, with the most recently created  first.
+- [Create a survey](https://developers.gorgias.com/reference/create-satisfaction-survey.md): Create a new satisfaction survey. If you don't want the satisfaction survey to be sent by Gorgias set `should_send_datetime` parameter to `null`.
+- [Retrieve a survey](https://developers.gorgias.com/reference/get-satisfaction-survey.md): Retrieve a survey
+- [Update a survey](https://developers.gorgias.com/reference/update-satisfaction-survey.md)
+- [Search for resources](https://developers.gorgias.com/reference/search-1.md)
+- [The Statistic object](https://developers.gorgias.com/reference/the-statistic-object.md)
+- [Retrieve a statistic](https://developers.gorgias.com/reference/get-legacy-statistic.md)
+- [Download a statistic](https://developers.gorgias.com/reference/download-legacy-statistic.md): Download CSV-formatted data of a statistic.
+- [The Tag object](https://developers.gorgias.com/reference/the-tag-object.md)
+- [Delete tags](https://developers.gorgias.com/reference/delete-tags.md): Delete a list of tags. Any views that use this tag will be deactivated. Tags currently used in macros and/or rules cannot be deleted.
+- [List tags](https://developers.gorgias.com/reference/list-tags.md): List tags matching the given parameters, paginated, and ordered.
+- [Create a tag](https://developers.gorgias.com/reference/create-tag.md)
+- [Merge tags](https://developers.gorgias.com/reference/merge-tags.md): Merge one or more tags into another tag. Source tags will be merged into the destination tag and then deleted.
+- [Delete a tag](https://developers.gorgias.com/reference/delete-tag.md): Delete a tag. Any views that use this tag will be deactivated. Tags currently used in macros and/or rules cannot be deleted.
+- [Retrieve a tag](https://developers.gorgias.com/reference/get-tag.md)
+- [Update a tag](https://developers.gorgias.com/reference/update-tag.md)
+- [The Team object](https://developers.gorgias.com/reference/the-team-object.md)
+- [List teams](https://developers.gorgias.com/reference/list-teams.md): List teams matching the given parameters, paginated, and ordered.
+- [Create a team](https://developers.gorgias.com/reference/create-team.md)
+- [Delete a team](https://developers.gorgias.com/reference/delete-team.md)
+- [Retrieve a team](https://developers.gorgias.com/reference/get-team.md)
+- [Update a team](https://developers.gorgias.com/reference/update-team.md)
+- [The Ticket object](https://developers.gorgias.com/reference/the-ticket-object.md)
+- [List tickets](https://developers.gorgias.com/reference/list-tickets.md): List tickets, paginated and ordered by the attribute of the given view.
+- [Create a ticket](https://developers.gorgias.com/reference/create-ticket.md)
+- [Delete a ticket](https://developers.gorgias.com/reference/delete-ticket.md)
+- [Retrieve a ticket](https://developers.gorgias.com/reference/get-ticket.md)
+- [Update a ticket](https://developers.gorgias.com/reference/update-ticket.md)
+- [List ticket field values](https://developers.gorgias.com/reference/list-ticket-custom-fields.md): List all custom fields for a ticket.
+- [Update ticket fields values](https://developers.gorgias.com/reference/update-ticket-custom-fields.md): Replace the custom field values for a ticket.  **Important — replace-all semantics:** The request body must contain *all* custom field values you want the ticket to have. Any field that currently has a value on the ticket but is **not included** in the request body will be deleted.  Some system-managed fields (e.g. *AI Agent Outcome*, *AI Intent*) can only be deleted by Gorgias internal apps.  **Safe pattern:** fetch the current values with `GET /api/tickets/{ticket_id}/custom-fields`, merge your changes, and send the full list back.
+- [Delete ticket field value](https://developers.gorgias.com/reference/delete-ticket-custom-field.md): Delete a custom field value from a ticket.  System-managed fields (e.g. *AI Agent Outcome*, *AI Intent*) can only be deleted by Gorgias internal apps.
+- [Update ticket field value](https://developers.gorgias.com/reference/update-ticket-custom-field.md): Update a ticket's custom field value.
+- [Remove ticket tags](https://developers.gorgias.com/reference/delete-ticket-tags.md): Remove tags from a ticket.
+- [Add ticket tags](https://developers.gorgias.com/reference/create-ticket-tags.md): Add tags to a ticket.
+- [Set ticket tags](https://developers.gorgias.com/reference/update-ticket-tags.md): Set a ticket's tags.
+- [List ticket tags](https://developers.gorgias.com/reference/list-ticket-tags.md): List all tags for a ticket.
+- [The TicketMessage object](https://developers.gorgias.com/reference/the-ticketmessage-object.md)
+- [List messages](https://developers.gorgias.com/reference/list-messages.md): List messages matching the given parameters, paginated.
+- [List messages of a ticket](https://developers.gorgias.com/reference/list-ticket-messages.md): List all messages of a ticket, ordered by their sending date, with the oldest messages first.<br> <span style={{color: 'red'}}>This endpoint has been deprecated.</span> Use [list messages](/reference/list-messages) endpoint instead.
+- [Create a message](https://developers.gorgias.com/reference/create-ticket-message.md): Create a message and either:   - not send it if the attribute `sent_datetime` is filled.   If you import a message that was already sent, make sure to set this value.   - send it to the recipients if the attribute `sent_datetime` is empty.   - add it to the ticket as an internal note if you specified this channel.   Internal notes are not sent to your customers.  When a message is created, it does not mean that this one has been sent because the creation and sending process are decoupled. Messages are basically sent asynchronously. Once a message has been sent, Gorgias will automatically update the message to fill the time when it was sent (`sent_datetime`).
+- [Delete a message](https://developers.gorgias.com/reference/delete-ticket-message.md)
+- [Retrieve a message](https://developers.gorgias.com/reference/get-ticket-message.md)
+- [Update a message](https://developers.gorgias.com/reference/update-ticket-message.md)
+- [The User object](https://developers.gorgias.com/reference/the-user-object.md)
+- [List users](https://developers.gorgias.com/reference/list-users.md): List users, paginated and ordered by their name (alphabetical order).
+- [Create a user](https://developers.gorgias.com/reference/create-user.md)
+- [Delete a user](https://developers.gorgias.com/reference/delete-user.md)
+- [Retrieve a user](https://developers.gorgias.com/reference/get-user.md)
+- [Update a user](https://developers.gorgias.com/reference/update-user.md)
+- [The View object](https://developers.gorgias.com/reference/the-view-object.md)
+- [List views](https://developers.gorgias.com/reference/list-views.md): List all views ordered by their `id` attribute. Current user variables (`{{current_user...}}`) present in views' filters will be replaced with the information of the user listing views.
+- [Create a view](https://developers.gorgias.com/reference/create-view.md)
+- [Delete a view](https://developers.gorgias.com/reference/delete-view.md)
+- [Retrieve a view](https://developers.gorgias.com/reference/get-view.md)
+- [Update a view](https://developers.gorgias.com/reference/update-view.md)
+- [List view's items](https://developers.gorgias.com/reference/list-view-items.md): List view's items, paginated, and ordered by the attribute specified in the data of view.
+- [Search for view's items](https://developers.gorgias.com/reference/update-view-items.md): List view's items, paginated, and ordered by the attribute specified in the data of view.
+- [The VoiceCall object](https://developers.gorgias.com/reference/the-voicecall-object.md)
+- [List voice calls](https://developers.gorgias.com/reference/list-voice-calls.md): List voice calls matching the given parameters, paginated, and ordered.
+- [Retrieve a voice call](https://developers.gorgias.com/reference/get-voice-call.md)
+- [The VoiceCallRecording object](https://developers.gorgias.com/reference/the-voicecallrecording-object.md)
+- [List voice call recordings](https://developers.gorgias.com/reference/list-voice-call-recordings.md): List voice call recordings matching the given parameters, paginated, and ordered.
+- [Delete a voice call recording](https://developers.gorgias.com/reference/delete-voice-call-recording.md)
+- [Retrieve a voice call recording](https://developers.gorgias.com/reference/get-voice-call-recording.md)
+- [The VoiceCallEvent object](https://developers.gorgias.com/reference/the-voicecallevent-object.md)
+- [List voice call events](https://developers.gorgias.com/reference/list-voice-call-events.md): List voice call events matching the given parameters, paginated, and ordered.
+- [Retrieve a voice call event](https://developers.gorgias.com/reference/get-voice-call-event.md)
+- [The Widget object](https://developers.gorgias.com/reference/the-widget-object.md)
+- [List widgets](https://developers.gorgias.com/reference/list-widgets.md): List all widgets for the account, ordered.
+- [Create a widget](https://developers.gorgias.com/reference/create-widget.md)
+- [Delete a widget](https://developers.gorgias.com/reference/delete-widget.md)
+- [Retrieve a widget](https://developers.gorgias.com/reference/get-widget.md)
+- [Update a widget](https://developers.gorgias.com/reference/update-widget.md)
+- [The Macro object](https://developers.gorgias.com/reference/the-macro-object-1.md)
+- [The Integration object](https://developers.gorgias.com/reference/the-integration-object-1.md)
+- [The Integration object](https://developers.gorgias.com/reference/the-integration-object-2.md)
+- [The Job object](https://developers.gorgias.com/reference/the-job-object-1.md)
+- [Retrieve a statistic](https://developers.gorgias.com/reference/get-statistic.md)
+- [The TicketHttpIntegration object](https://developers.gorgias.com/reference/the-tickethttpintegration-object.md)
+- [The Statistic object](https://developers.gorgias.com/reference/the-statistic-object.md)
+
+## Pages
+- [Test variables](https://developers.gorgias.com/page/test-variables.md)
+
+## Changelog
+- [New email message data retention policy](https://developers.gorgias.com/changelog/new-email-message-data-retention-policy.md)
+- [Audit log events retention limited to 12 months](https://developers.gorgias.com/changelog/audit-log-events-retention-limited-to-12-months.md)
+- [API Rate Limits Improvements](https://developers.gorgias.com/changelog/api-rate-limits-improvements.md)
+- [TLS 1.2 Security Update scheduled on Dec 11](https://developers.gorgias.com/changelog/tls-12-security-update-scheduled-on-dec-11.md)
+- [`self-service-overview` statistics will be removed from the Statistics API](https://developers.gorgias.com/changelog/self-service-overview-statistics-will-be-removed-from-the-statistics-api.md)
+- [Limit length of ticket subject](https://developers.gorgias.com/changelog/limit-ticket-subject-size.md)
+- [The views items search resource pagination cursor format was changed](https://developers.gorgias.com/changelog/the-views-items-search-resource-pagination-cursor-format-was-changed.md)
+- [301 redirects on merged customers](https://developers.gorgias.com/changelog/301-redirects-on-customers.md)
+- [Remove HTTP PUT method from /tickets/search endpoint](https://developers.gorgias.com/changelog/remove-http-put-method-from-ticketssearch-endpoint.md)
+- [Resource URLs returned through the API will not be directly acessible anymore](https://developers.gorgias.com/changelog/resource-urls-returned-through-the-api-will-not-be-directly-acessible-anymore.md)

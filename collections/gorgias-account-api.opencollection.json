@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gorgias REST Account API",
+    "version": "2024-01-01"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{account}.gorgias.com/api/account"
+          },
+          "docs": "Retrieve account"
+        },
+        {
+          "info": {
+            "name": "Retrieve account settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{account}.gorgias.com/api/account/settings"
+          },
+          "docs": "Retrieve account settings"
+        },
+        {
+          "info": {
+            "name": "Update account settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{account}.gorgias.com/api/account/settings",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update account settings"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

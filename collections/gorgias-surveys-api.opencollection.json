@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gorgias REST Account Surveys API",
+    "version": "2024-01-01"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Surveys",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List satisfaction surveys",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{account}.gorgias.com/api/satisfaction-surveys"
+          },
+          "docs": "List satisfaction surveys"
+        },
+        {
+          "info": {
+            "name": "Create satisfaction survey",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{account}.gorgias.com/api/satisfaction-surveys",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create satisfaction survey"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,610 @@
+{
+  "item": [
+    {
+      "id": "4b026835-9ae0-47e3-a597-802c4351d379",
+      "name": "Tickets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7dac49f2-abac-45ee-a3fb-8a8050ec7234",
+          "name": "List tickets",
+          "request": {
+            "name": "List tickets",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "30"
+                },
+                {
+                  "disabled": false,
+                  "key": "customer_id",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "assignee_user_id",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Account subdomain",
+                  "type": "any",
+                  "value": "{{account}}",
+                  "key": "account"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cf2069c8-493f-4d85-adb4-2bceb3614d8e",
+              "name": "Tickets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "30"
+                    },
+                    {
+                      "key": "customer_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "assignee_user_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "status",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Account subdomain",
+                      "type": "any",
+                      "value": "{{account}}",
+                      "key": "account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": 7065,\n      \"external_id\": \"string\",\n      \"status\": \"open\",\n      \"priority\": \"high\",\n      \"channel\": \"string\",\n      \"via\": \"string\",\n      \"subject\": \"string\",\n      \"snippet\": \"string\",\n      \"customer\": {\n        \"id\": 646,\n        \"external_id\": \"string\",\n        \"firstname\": \"string\",\n        \"lastname\": \"string\",\n        \"name\": \"string\",\n        \"email\": \"dlgT@czoNXVCZ.dktf\",\n        \"language\": \"string\",\n        \"timezone\": \"string\",\n        \"meta\": {},\n        \"created_datetime\": \"1988-05-29T02:14:58.248Z\",\n        \"updated_datetime\": \"2020-01-22T22:45:10.524Z\"\n      },\n      \"assignee_user\": {},\n      \"assignee_team\": {},\n      \"messages_count\": 9841,\n      \"created_datetime\": \"2001-10-02T09:13:38.206Z\",\n      \"updated_datetime\": \"2024-12-27T09:20:33.011Z\"\n    },\n    {\n      \"id\": 1085,\n      \"external_id\": \"string\",\n      \"status\": \"open\",\n      \"priority\": \"low\",\n      \"channel\": \"string\",\n      \"via\": \"string\",\n      \"subject\": \"string\",\n      \"snippet\": \"string\",\n      \"customer\": {\n        \"id\": 1387,\n        \"external_id\": \"string\",\n        \"firstname\": \"string\",\n        \"lastname\": \"string\",\n        \"name\": \"string\",\n        \"email\": \"Hmz-ne@PDVYbidmOL.ogpq\",\n        \"language\": \"string\",\n        \"timezone\": \"string\",\n        \"meta\": {},\n        \"created_datetime\": \"1992-05-20T06:40:46.906Z\",\n        \"updated_datetime\": \"1999-03-21T15:09:30.296Z\"\n      },\n      \"assignee_user\": {},\n      \"assignee_team\": {},\n      \"messages_count\": 2538,\n      \"created_datetime\": \"2025-12-22T06:25:58.085Z\",\n      \"updated_datetime\": \"2022-12-04T16:23:46.645Z\"\n    }\n  ],\n  \"meta\": {\n    \"next_cursor\": \"string\",\n    \"previous_cursor\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4d64768a-8b97-4303-9810-d77864fff822",
+          "name": "Create ticket",
+          "request": {
+            "name": "Create ticket",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "tickets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Account subdomain",
+                  "type": "any",
+                  "value": "{{account}}",
+                  "key": "account"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"external_id\": \"<string>\",\n  \"status\": \"<string>\",\n  \"priority\": \"<string>\",\n  \"channel\": \"<string>\",\n  \"via\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"snippet\": \"<string>\",\n  \"customer\": {\n    \"id\": \"<integer>\",\n    \"external_id\": \"<string>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"language\": \"<string>\",\n    \"timezone\": \"<string>\",\n    \"channels\": [\n      \"<object>\",\n      \"<object>\"\n    ],\n    \"meta\": \"<object>\",\n    \"created_datetime\": \"<dateTime>\",\n    \"updated_datetime\": \"<dateTime>\"\n  },\n  \"assignee_user\": \"<object>\",\n  \"assignee_team\": \"<object>\",\n  \"tags\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"messages_count\": \"<integer>\",\n  \"created_datetime\": \"<dateTime>\",\n  \"updated_datetime\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e378f93f-5263-424a-a0c2-2fcbc444bead",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "tickets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Account subdomain",
+                      "type": "any",
+                      "value": "{{account}}",
+                      "key": "account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"external_id\": \"<string>\",\n  \"status\": \"<string>\",\n  \"priority\": \"<string>\",\n  \"channel\": \"<string>\",\n  \"via\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"snippet\": \"<string>\",\n  \"customer\": {\n    \"id\": 4809,\n    \"external_id\": \"string\",\n    \"firstname\": \"string\",\n    \"lastname\": \"string\",\n    \"name\": \"string\",\n    \"email\": \"lDR-HVumeNAg@OhvdoRzxmpVgsXJRk.kos\",\n    \"language\": \"string\",\n    \"timezone\": \"string\",\n    \"meta\": {},\n    \"created_datetime\": \"2011-09-17T10:08:29.855Z\",\n    \"updated_datetime\": \"1976-06-12T17:47:23.665Z\"\n  },\n  \"assignee_user\": \"<object>\",\n  \"assignee_team\": \"<object>\",\n  \"tags\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"messages_count\": \"<integer>\",\n  \"created_datetime\": \"<dateTime>\",\n  \"updated_datetime\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b2a9a524-b549-4e42-a570-8a1afa384dee",
+          "name": "Retrieve a ticket",
+          "request": {
+            "name": "Retrieve a ticket",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "tickets",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Account subdomain",
+                  "type": "any",
+                  "value": "{{account}}",
+                  "key": "account"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1fd422fd-7cca-4d91-8908-9a4f79d3751a",
+              "name": "Ticket",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "tickets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Account subdomain",
+                      "type": "any",
+                      "value": "{{account}}",
+                      "key": "account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "86deed92-7140-4fb6-8ef3-c591ddb06c8c",
+          "name": "Update a ticket",
+          "request": {
+            "name": "Update a ticket",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "tickets",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Account subdomain",
+                  "type": "any",
+                  "value": "{{account}}",
+                  "key": "account"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"external_id\": \"<string>\",\n  \"status\": \"<string>\",\n  \"priority\": \"<string>\",\n  \"channel\": \"<string>\",\n  \"via\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"snippet\": \"<string>\",\n  \"customer\": {\n    \"id\": \"<integer>\",\n    \"external_id\": \"<string>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"name\": \"<string>\",\n    \"email\": \"<email>\",\n    \"language\": \"<string>\",\n    \"timezone\": \"<string>\",\n    \"channels\": [\n      \"<object>\",\n      \"<object>\"\n    ],\n    \"meta\": \"<object>\",\n    \"created_datetime\": \"<dateTime>\",\n    \"updated_datetime\": \"<dateTime>\"\n  },\n  \"assignee_user\": \"<object>\",\n  \"assignee_team\": \"<object>\",\n  \"tags\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"messages_count\": \"<integer>\",\n  \"created_datetime\": \"<dateTime>\",\n  \"updated_datetime\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "77662f78-c472-4faf-b9a8-f26b98fd6f2e",
+              "name": "Ticket",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "tickets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Account subdomain",
+                      "type": "any",
+                      "value": "{{account}}",
+                      "key": "account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"external_id\": \"<string>\",\n  \"status\": \"<string>\",\n  \"priority\": \"<string>\",\n  \"channel\": \"<string>\",\n  \"via\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"snippet\": \"<string>\",\n  \"customer\": {\n    \"id\": 4809,\n    \"external_id\": \"string\",\n    \"firstname\": \"string\",\n    \"lastname\": \"string\",\n    \"name\": \"string\",\n    \"email\": \"lDR-HVumeNAg@OhvdoRzxmpVgsXJRk.kos\",\n    \"language\": \"string\",\n    \"timezone\": \"string\",\n    \"meta\": {},\n    \"created_datetime\": \"2011-09-17T10:08:29.855Z\",\n    \"updated_datetime\": \"1976-06-12T17:47:23.665Z\"\n  },\n  \"assignee_user\": \"<object>\",\n  \"assignee_team\": \"<object>\",\n  \"tags\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"messages_count\": \"<integer>\",\n  \"created_datetime\": \"<dateTime>\",\n  \"updated_datetime\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b0450424-0f40-4934-b988-301772275f24",
+          "name": "Delete a ticket",
+          "request": {
+            "name": "Delete a ticket",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "tickets",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Account subdomain",
+                  "type": "any",
+                  "value": "{{account}}",
+                  "key": "account"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8fed35c7-d5b5-4e85-9311-9e3f2e2660a2",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "tickets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Account subdomain",
+                      "type": "any",
+                      "value": "{{account}}",
+                      "key": "account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Account subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "account"
+    },
+    {
+      "type": "string",
+      "value": "https://{{account}}.gorgias.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "41ddfb50-8419-4ecf-b3e8-1c8861803662",
+    "name": "Gorgias REST Account Tickets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 for the Gorgias REST API, covering tickets, messages, customers, integrations, macros, rules, tags, teams, users, views, surveys, and widgets. Gorgias uses per-account subdomains ({account}.gorgias.com) and supports HTTP Basic authentication with an API key or OAuth2 for public apps.",
+      "type": "text/plain"
+    }
+  }
+}

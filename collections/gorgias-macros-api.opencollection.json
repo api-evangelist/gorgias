@@ -1,0 +1,109 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gorgias REST Account Macros API",
+    "version": "2024-01-01"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Macros",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List macros",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{account}.gorgias.com/api/macros"
+          },
+          "docs": "List macros"
+        },
+        {
+          "info": {
+            "name": "Create macro",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{account}.gorgias.com/api/macros",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create macro"
+        },
+        {
+          "info": {
+            "name": "Get macro",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{account}.gorgias.com/api/macros/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get macro"
+        },
+        {
+          "info": {
+            "name": "Update macro",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{account}.gorgias.com/api/macros/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update macro"
+        },
+        {
+          "info": {
+            "name": "Delete macro",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{account}.gorgias.com/api/macros/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete macro"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
