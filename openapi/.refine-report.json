@@ -1,19 +1,7 @@
 {
   "provider": "gorgias",
   "sources": [
-    "gorgias-account-api-openapi.yml",
-    "gorgias-customers-api-openapi.yml",
-    "gorgias-integrations-api-openapi.yml",
-    "gorgias-macros-api-openapi.yml",
-    "gorgias-messages-api-openapi.yml",
-    "gorgias-rules-api-openapi.yml",
-    "gorgias-surveys-api-openapi.yml",
-    "gorgias-tags-api-openapi.yml",
-    "gorgias-teams-api-openapi.yml",
-    "gorgias-tickets-api-openapi.yml",
-    "gorgias-users-api-openapi.yml",
-    "gorgias-views-api-openapi.yml",
-    "gorgias-widgets-api-openapi.yml"
+    "_original/gorgias-openapi.yml"
   ],
   "outputs": [
     "gorgias-account-api-openapi.yml",
@@ -33,6 +21,24 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "gorgias-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "gorgias-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-customers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-integrations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-macros-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-messages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-rules-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-surveys-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-teams-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-tickets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-users-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-views-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "gorgias-widgets-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
