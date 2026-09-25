@@ -327,6 +327,8 @@ apis:
   - type: ChangeLog
     url: https://developers.gorgias.com/changelog
 common:
+  - type: VendorFacets
+    url: vendor-facets/gorgias-vendor-facets.yml
   - type: AgenticAccess
     url: agentic-access/gorgias-agentic-access.yml
   - type: VulnerabilityDisclosure
