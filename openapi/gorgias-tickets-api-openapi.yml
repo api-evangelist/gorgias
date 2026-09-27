@@ -112,13 +112,6 @@ paths:
           description: Deleted
 components:
   parameters:
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
-        default: 30
-        maximum: 100
     Cursor:
       name: cursor
       in: query
@@ -130,7 +123,47 @@ components:
       required: true
       schema:
         type: integer
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 30
+        maximum: 100
   schemas:
+    Customer:
+      type: object
+      properties:
+        id:
+          type: integer
+        external_id:
+          type: string
+          nullable: true
+        firstname:
+          type: string
+        lastname:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        language:
+          type: string
+        timezone:
+          type: string
+        channels:
+          type: array
+          items:
+            type: object
+        meta:
+          type: object
+        created_datetime:
+          type: string
+          format: date-time
+        updated_datetime:
+          type: string
+          format: date-time
     Ticket:
       type: object
       properties:
@@ -173,39 +206,6 @@ components:
             type: object
         messages_count:
           type: integer
-        created_datetime:
-          type: string
-          format: date-time
-        updated_datetime:
-          type: string
-          format: date-time
-    Customer:
-      type: object
-      properties:
-        id:
-          type: integer
-        external_id:
-          type: string
-          nullable: true
-        firstname:
-          type: string
-        lastname:
-          type: string
-        name:
-          type: string
-        email:
-          type: string
-          format: email
-        language:
-          type: string
-        timezone:
-          type: string
-        channels:
-          type: array
-          items:
-            type: object
-        meta:
-          type: object
         created_datetime:
           type: string
           format: date-time

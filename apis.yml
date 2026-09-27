@@ -37,11 +37,11 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gorgias.png
 tags:
-  - Customer-Support
+  - Customer Support
   - Help Desk
   - E-Commerce
   - Shopify
-  - Tickets
+  - Ticketing
   - Conversations
 tags_raw:
   - Customer Support
@@ -50,6 +50,7 @@ tags_raw:
   - Shopify
   - Tickets
   - Conversations
+  - Customer-Support
 url: >-
   https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/apis.yml
 created: '2026-05-11'
@@ -70,7 +71,7 @@ apis:
   - Webhook
   - Event
   - HTTP Integration
-  - Tickets
+  - Ticketing
   - Message
   tags_raw:
   - Webhooks
@@ -258,6 +259,8 @@ apis:
   humanURL: https://developers.gorgias.com/reference/introduction
   baseURL: https://{subdomain}.gorgias.com/api
   tags:
+  - Ticketing
+  tags_raw:
   - Tickets
   properties:
   - type: OpenAPI

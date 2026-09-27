@@ -58,6 +58,13 @@ paths:
         '201':
           description: Created
 components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
   schemas:
     Message:
       type: object
@@ -99,13 +106,6 @@ components:
         sent_datetime:
           type: string
           format: date-time
-  parameters:
-    Id:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: integer
   securitySchemes:
     basicAuth:
       type: http

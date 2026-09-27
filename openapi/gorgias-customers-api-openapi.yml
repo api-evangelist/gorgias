@@ -109,13 +109,6 @@ paths:
           description: Deleted
 components:
   parameters:
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
-        default: 30
-        maximum: 100
     Cursor:
       name: cursor
       in: query
@@ -127,6 +120,13 @@ components:
       required: true
       schema:
         type: integer
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 30
+        maximum: 100
   schemas:
     Customer:
       type: object
