@@ -59,13 +59,6 @@ paths:
           description: Items
 components:
   parameters:
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
-        default: 30
-        maximum: 100
     Id:
       name: id
       in: path
@@ -77,6 +70,13 @@ components:
       in: query
       schema:
         type: string
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 30
+        maximum: 100
   securitySchemes:
     basicAuth:
       type: http

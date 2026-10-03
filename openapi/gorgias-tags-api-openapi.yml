@@ -104,6 +104,13 @@ paths:
         '204':
           description: Deleted
 components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
   schemas:
     Tag:
       type: object
@@ -123,13 +130,6 @@ components:
         updated_datetime:
           type: string
           format: date-time
-  parameters:
-    Id:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: integer
   securitySchemes:
     basicAuth:
       type: http
