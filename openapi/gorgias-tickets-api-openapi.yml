@@ -203,6 +203,11 @@ components:
           type: string
           nullable: true
   parameters:
+    Cursor:
+      name: cursor
+      in: query
+      schema:
+        type: string
     Limit:
       name: limit
       in: query
@@ -216,11 +221,6 @@ components:
       required: true
       schema:
         type: integer
-    Cursor:
-      name: cursor
-      in: query
-      schema:
-        type: string
   securitySchemes:
     basicAuth:
       type: http

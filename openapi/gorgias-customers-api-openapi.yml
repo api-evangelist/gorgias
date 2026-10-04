@@ -109,6 +109,11 @@ paths:
           description: Deleted
 components:
   parameters:
+    Cursor:
+      name: cursor
+      in: query
+      schema:
+        type: string
     Limit:
       name: limit
       in: query
@@ -122,11 +127,6 @@ components:
       required: true
       schema:
         type: integer
-    Cursor:
-      name: cursor
-      in: query
-      schema:
-        type: string
   schemas:
     Customer:
       type: object
