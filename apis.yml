@@ -36,6 +36,9 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gorgias.png
+x-docs-platform: readme
+x-docs-platform-confidence: high
+x-docs-platform-checked: 2026-10-03
 tags:
   - Customer Support
   - Help Desk
@@ -330,6 +333,9 @@ apis:
   - type: ChangeLog
     url: https://developers.gorgias.com/changelog
 common:
+  - type: CapabilityMap
+    url: capabilities/gorgias-capability-edges.yml
+    name: Gorgias Business Capability Map
   - type: VendorFacets
     url: vendor-facets/gorgias-vendor-facets.yml
   - type: AgenticAccess
