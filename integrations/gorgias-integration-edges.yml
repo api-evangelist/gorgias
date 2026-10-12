@@ -1,0 +1,471 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/gorgias/integrations
+- https://composio.dev/toolkits/gorgias
+checked:
+- https://composio.dev/toolkits/gorgias
+- https://monid.ai/tools/gorgias
+- https://n8n.io/integrations/gorgias/
+- https://zapier.com/apps/gorgias/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: gorgias
+  url: https://zapier.com/apps/gorgias/integrations
+  external_url: https://www.gorgias.com/
+  partner_tier: SILVER
+  triggers: []
+  actions:
+  - key: create_ticket
+    label: Create Ticket
+  - key: create_ticket_message
+    label: Create Ticket Message
+  searches: []
+- marketplace: composio
+  channel: agent-gateway
+  app: gorgias
+  url: https://composio.dev/toolkits/gorgias
+  identity: action-prefix
+  actions:
+  - key: GORGIAS_ADD_TICKET_TAGS
+  - key: GORGIAS_CREATE_ACCOUNT_SETTING
+  - key: GORGIAS_CREATE_CUSTOMER
+  - key: GORGIAS_CREATE_TEAM
+  - key: GORGIAS_CREATE_TICKET
+  - key: GORGIAS_DELETE_CUSTOMER
+  - key: GORGIAS_DELETE_CUSTOMERS
+  - key: GORGIAS_DELETE_CUSTOMER_FIELD_VALUE
+  - key: GORGIAS_DELETE_TEAM
+  - key: GORGIAS_DELETE_TICKET
+  - key: GORGIAS_DELETE_TICKET_FIELD_VALUE
+  - key: GORGIAS_GET_ACCOUNT
+  - key: GORGIAS_GET_CUSTOMER
+  - key: GORGIAS_GET_EVENT
+  - key: GORGIAS_GET_TEAM
+  - key: GORGIAS_GET_TICKET
+  - key: GORGIAS_LIST_ACCOUNT_SETTINGS
+  - key: GORGIAS_LIST_CUSTOMERS
+  - key: GORGIAS_LIST_CUSTOMER_FIELD_VALUES
+  - key: GORGIAS_LIST_EVENTS
+  - key: GORGIAS_LIST_TEAMS
+  - key: GORGIAS_LIST_TICKETS
+  - key: GORGIAS_LIST_TICKET_FIELD_VALUES
+  - key: GORGIAS_LIST_TICKET_TAGS
+  - key: GORGIAS_MERGE_CUSTOMERS
+  - key: GORGIAS_REMOVE_TICKET_TAGS
+  - key: GORGIAS_SET_CUSTOMER_DATA
+  - key: GORGIAS_SET_TICKET_TAGS
+  - key: GORGIAS_UPDATE_ACCOUNT_SETTING
+  - key: GORGIAS_UPDATE_CUSTOMER
+  - key: GORGIAS_UPDATE_TEAM
+  - key: GORGIAS_UPDATE_TICKET
+edges:
+- partner_name: Typeform
+  partner: typeform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/typeform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.typeform.com/signup?utm_medium=referral&utm_source=zapier&utm_campaign=zapier_integration&utm_content=marketplace
+- partner_name: Shopify
+  partner: shopify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/shopify
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.shopify.com/
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: RingCentral
+  partner: ringcentral
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/ringcentral
+  direction: third-party
+  category: Phone & SMS
+  partner_url: http://www.ringcentral.com/
+- partner_name: Google Forms
+  partner: google-forms
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/google-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://google.com/
+- partner_name: monday.com
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/monday
+  direction: third-party
+  category: Project Management
+  partner_url: https://monday.com/
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: Tally
+  partner: tally
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/tally
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://try.tally.so/zapier
+- partner_name: Quo
+  partner: quo
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/quo
+  direction: third-party
+  category: Phone & SMS
+  partner_url: https://quo.com/?utm_source=partnership&utm_medium=partner&utm_campaign=zapier
+- partner_name: Jotform
+  partner: jotform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/jotform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://www.jotform.com/
+- partner_name: Notion
+  partner: notion
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/notion
+  direction: third-party
+  category: Task Management
+  partner_url: https://www.notion.so/
+- partner_name: HulkApps Form Builder
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/hulkapps-form-builder
+  direction: third-party
+  category: App Builder
+  partner_url: https://www.hulkapps.com/products/shopify-form-builder-app
+- partner_name: ClickFunnels
+  partner: clickfunnels
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/clickfunnels
+  direction: third-party
+  category: Website & App Building
+  partner_url: https://help.myclickfunnels.com/hc/en-us/articles/9655675588119-ClickFunnels-FAQs
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: Google Business Profile
+  partner: google-business-profile
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/google-business-profile
+  direction: third-party
+  category: Google
+  partner_url: https://www.google.com/business/
+- partner_name: Google Ads
+  partner: google-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/google-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://ads.google.com/
+- partner_name: Klaviyo
+  partner: klaviyo
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/klaviyo
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.klaviyo.com/
+- partner_name: Google Sheets
+  partner: google-sheets
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/google-sheets
+  direction: third-party
+  category: Google
+  partner_url: http://sheets.google.com/
+- partner_name: Recharge
+  partner: recharge-payments
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/recharge
+  direction: third-party
+  category: eCommerce
+  partner_url: https://getrecharge.com/ecommerce/shopify-subscriptions/
+- partner_name: Calendly
+  partner: calendly
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/calendly
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://calendly.com/?utm_medium=partner&utm_source=zapier&utm_campaign=main_partner_page&utm_content=main_inbound_link
+- partner_name: YouTube
+  partner: youtube
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/youtube
+  direction: third-party
+  category: Google
+  partner_url: https://www.youtube.com/
+- partner_name: ParcelPanel
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/parcelpanel
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.parcelpanel.com/
+- partner_name: Twilio
+  partner: twilio
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/twilio
+  direction: third-party
+  category: Phone & SMS
+  partner_url: https://www.twilio.com/
+- partner_name: BigCommerce
+  partner: bigcommerce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/bigcommerce
+  direction: third-party
+  category: eCommerce
+  partner_url: http://www.bigcommerce.com/
+- partner_name: Zapier Chatbots
+  partner: zapier
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/zapier-chatbots
+  direction: third-party
+  category: AI Chatbots
+  partner_url: https://zapier.com/blog/create-custom-ai-chatbots-with-interfaces/
+- partner_name: Loop Returns
+  partner: loop-returns
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/loopreturns
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.loopreturns.com/
+- partner_name: Facebook Lead Ads
+  partner: facebook-lead-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/facebook-lead-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.facebook.com/business/ads/lead-ads
+- partner_name: ClickUp
+  partner: clickup
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/clickup
+  direction: third-party
+  category: Project Management
+  partner_url: https://clickup.com/zapier
+- partner_name: Fillout Forms
+  partner: fillout
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/fillout
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.fillout.com/?ref=zapier
+- partner_name: Facebook Messenger
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/gorgias/integrations/facebook-messenger
+  direction: third-party
+  category: Facebook
+  partner_url: https://www.messenger.com/
+- partner_name: listrak
+  partner: listrak
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: processor-connection
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/listrak/blob/main/openapi/listrak-tickets-api-openapi.yml
+  contract_reference:
+    repo: listrak
+    spec_file: listrak-tickets-api-openapi.yml
+    value: gorgias
+    property: components.schemas.integrationType
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+templates:
+- title: Create tickets in Gorgias for new form responses in Google Forms
+  url: https://zapier.com/apps/google-forms/integrations/gorgias/1718563/create-tickets-in-gorgias-for-new-form-responses-in-google-forms
+  apps:
+  - google-forms
+  - gorgias
+- title: Generate new Gorgias tickets from new Google Sheets rows
+  url: https://zapier.com/apps/google-sheets/integrations/gorgias/1788663/generate-new-gorgias-tickets-from-new-google-sheets-rows
+  apps:
+  - google-sheets
+  - gorgias
+- title: Create Gorgias tickets from new or updated Google Sheets rows
+  url: https://zapier.com/apps/google-sheets/integrations/gorgias/1721324/create-gorgias-tickets-from-new-or-updated-google-sheets-rows
+  apps:
+  - google-sheets
+  - gorgias
+- title: Create tickets in Gorgias from new records in Airtable
+  url: https://zapier.com/apps/airtable/integrations/gorgias/1749149/create-tickets-in-gorgias-from-new-records-in-airtable
+  apps:
+  - airtable
+  - gorgias
+- title: Create tickets in Gorgias for new orders in Shopify
+  url: https://zapier.com/apps/gorgias/integrations/shopify/1749691/create-tickets-in-gorgias-for-new-orders-in-shopify
+  apps:
+  - shopify
+  - gorgias
+- title: Create tickets in Gorgias when new entries are added in Typeform
+  url: https://zapier.com/apps/gorgias/integrations/typeform/1750196/create-tickets-in-gorgias-when-new-entries-are-added-in-typeform
+  apps:
+  - typeform
+  - gorgias
+- title: Create tickets in Gorgias for every new lead from Facebook Lead Ads
+  url: https://zapier.com/apps/facebook-lead-ads/integrations/gorgias/1753376/create-tickets-in-gorgias-for-every-new-lead-from-facebook-lead-ads
+  apps:
+  - facebook-lead-ads
+  - gorgias
+- title: Create new Gorgias tickets from ended RingCentral calls
+  url: https://zapier.com/apps/gorgias/integrations/ringcentral/1755054/create-new-gorgias-tickets-from-ended-ringcentral-calls
+  apps:
+  - ringcentral
+  - gorgias
+- title: Create tickets in Gorgias for new sms/mms received in RingCentral
+  url: https://zapier.com/apps/gorgias/integrations/ringcentral/1755146/create-tickets-in-gorgias-for-new-smsmms-received-in-ringcentral
+  apps:
+  - ringcentral
+  - gorgias
+- title: Create Gorgias tickets from completed Quo calls
+  url: https://zapier.com/apps/gorgias/integrations/quo/1768747/create-gorgias-tickets-from-completed-quo-calls
+  apps:
+  - quo
+  - gorgias
+- title: Create new Gorgias tickets from new Ontraport form submissions
+  url: https://zapier.com/apps/gorgias/integrations/ontraport/1768805/create-new-gorgias-tickets-from-new-ontraport-form-submissions
+  apps:
+  - ontraport
+  - gorgias
+- title: Create tickets in Gorgias for new entries in Wufoo
+  url: https://zapier.com/apps/gorgias/integrations/wufoo/1782773/create-tickets-in-gorgias-for-new-entries-in-wufoo
+  apps:
+  - wufoo
+  - gorgias
+template_total: 38
