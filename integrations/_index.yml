@@ -145,7 +145,6 @@
   arazzo: null
 - slug: gorgias-monday-com
   label: monday.com
-  partner: monday-com
   partner_name: monday.com
   category: Project Management
   type: marketplace
@@ -153,7 +152,7 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/gorgias/integrations/monday
   source: edge
-  status: pending-generation
+  status: pending-partner-spec
   arazzo: null
 - slug: gorgias-slack
   label: Slack
@@ -420,5 +419,17 @@
     property: components.schemas.integrationType
     detected_by: detect-payment-method-edges.py
     detected: '2026-10-12'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-shopify-own
+  label: Shopify (own)
+  partner: shopify
+  partner_name: Shopify (own)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://apps.shopify.com/helpdesk
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
