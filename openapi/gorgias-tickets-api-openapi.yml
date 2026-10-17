@@ -111,7 +111,68 @@ paths:
         '204':
           description: Deleted
 components:
+  parameters:
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 30
+        maximum: 100
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    Cursor:
+      name: cursor
+      in: query
+      schema:
+        type: string
   schemas:
+    Meta:
+      type: object
+      properties:
+        next_cursor:
+          type: string
+          nullable: true
+        previous_cursor:
+          type: string
+          nullable: true
+    Customer:
+      type: object
+      properties:
+        id:
+          type: integer
+        external_id:
+          type: string
+          nullable: true
+        firstname:
+          type: string
+        lastname:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        language:
+          type: string
+        timezone:
+          type: string
+        channels:
+          type: array
+          items:
+            type: object
+        meta:
+          type: object
+        created_datetime:
+          type: string
+          format: date-time
+        updated_datetime:
+          type: string
+          format: date-time
     Ticket:
       type: object
       properties:
@@ -160,67 +221,6 @@ components:
         updated_datetime:
           type: string
           format: date-time
-    Customer:
-      type: object
-      properties:
-        id:
-          type: integer
-        external_id:
-          type: string
-          nullable: true
-        firstname:
-          type: string
-        lastname:
-          type: string
-        name:
-          type: string
-        email:
-          type: string
-          format: email
-        language:
-          type: string
-        timezone:
-          type: string
-        channels:
-          type: array
-          items:
-            type: object
-        meta:
-          type: object
-        created_datetime:
-          type: string
-          format: date-time
-        updated_datetime:
-          type: string
-          format: date-time
-    Meta:
-      type: object
-      properties:
-        next_cursor:
-          type: string
-          nullable: true
-        previous_cursor:
-          type: string
-          nullable: true
-  parameters:
-    Cursor:
-      name: cursor
-      in: query
-      schema:
-        type: string
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
-        default: 30
-        maximum: 100
-    Id:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: integer
   securitySchemes:
     basicAuth:
       type: http

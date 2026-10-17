@@ -109,11 +109,6 @@ paths:
           description: Deleted
 components:
   parameters:
-    Cursor:
-      name: cursor
-      in: query
-      schema:
-        type: string
     Limit:
       name: limit
       in: query
@@ -127,7 +122,21 @@ components:
       required: true
       schema:
         type: integer
+    Cursor:
+      name: cursor
+      in: query
+      schema:
+        type: string
   schemas:
+    Meta:
+      type: object
+      properties:
+        next_cursor:
+          type: string
+          nullable: true
+        previous_cursor:
+          type: string
+          nullable: true
     Customer:
       type: object
       properties:
@@ -161,15 +170,6 @@ components:
         updated_datetime:
           type: string
           format: date-time
-    Meta:
-      type: object
-      properties:
-        next_cursor:
-          type: string
-          nullable: true
-        previous_cursor:
-          type: string
-          nullable: true
   securitySchemes:
     basicAuth:
       type: http
