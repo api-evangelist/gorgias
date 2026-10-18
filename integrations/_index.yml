@@ -512,7 +512,7 @@
     - alpha
     in_cloud: true
     builder: unknown (community connector; contributor not in the record)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: gorgias-fivetran
   label: Fivetran
@@ -538,7 +538,7 @@
     - connectors/applications/gorgias
     vendor_link: https://www.gorgias.com/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: gorgias-meltano
   label: Meltano
@@ -570,5 +570,5 @@
     - gold
     - unknown
     builder: 'community (Meltano Hub variant maintainers: brooklyn-data, pathlight)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
