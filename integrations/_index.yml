@@ -572,3 +572,1231 @@
     builder: 'community (Meltano Hub variant maintainers: brooklyn-data, pathlight)'
   status: not-a-workflow
   arazzo: null
+- slug: gorgias-ada
+  label: Ada
+  partner: ada
+  partner_name: Ada
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/ada
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Ada
+    matched_domain: ada.cx
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Ada
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-aftership
+  label: AfterShip
+  partner: aftership
+  partner_name: AfterShip
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/aftership
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: AfterShip
+    matched_domain: aftership.com
+    matched_by: domain
+    listings: 2
+    sample_apps:
+    - AfterShip Returns Center
+    - AfterShip Tracking
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-aircall
+  label: Aircall
+  partner: aircall
+  partner_name: Aircall
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/aircall
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Aircall
+    matched_domain: aircall.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Aircall
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-alloy-automation
+  label: Alloy Automation
+  partner: alloy-automation
+  partner_name: Alloy Automation
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/alloy
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Alloy Automation
+    matched_domain: runalloy.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Alloy Automation
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-bloomreach
+  label: Bloomreach
+  partner: bloomreach
+  partner_name: Bloomreach
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/bloomreach
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Bloomreach
+    matched_domain: bloomreach.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Bloomreach
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-cloudtalk
+  label: Cloudtalk
+  partner: cloudtalk
+  partner_name: Cloudtalk
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/cloudtalk
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Cloudtalk
+    matched_domain: cloudtalk.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Cloudtalk
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-composio
+  label: Composio
+  partner: composio
+  partner_name: Composio
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/composio
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Composio
+    matched_domain: composio.dev
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Composio
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-digioh
+  label: Digioh
+  partner: digioh
+  partner_name: Digioh
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/digioh
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Digioh
+    matched_domain: digioh.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Digioh
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-digitalgenius
+  label: DigitalGenius
+  partner: digitalgenius
+  partner_name: DigitalGenius
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/digitalgenius
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: DigitalGenius
+    matched_domain: digitalgenius.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - DigitalGenius
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-dotdigital
+  label: Dotdigital
+  partner: dotdigital
+  partner_name: Dotdigital
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/dotdigital
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Dotdigital
+    matched_domain: dotdigital.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Dotdigital
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-electric
+  label: Electric
+  partner: electric
+  partner_name: Electric
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/electric-it-hub
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Electric
+    matched_domain: electric.ai
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Electric IT Hub
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-extend-inc
+  label: Extend, Inc
+  partner: extend
+  partner_name: Extend, Inc
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/extend
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Extend, Inc
+    matched_domain: extend.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Extend
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-fini-technologies
+  label: Fini Technologies
+  partner: fini
+  partner_name: Fini Technologies
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/fini-ai
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Fini Technologies
+    matched_domain: usefini.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Fini AI
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-formspree-inc
+  label: Formspree, Inc.
+  partner: formspree
+  partner_name: Formspree, Inc.
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/formspree
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Formspree, Inc.
+    matched_domain: formspree.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Formspree
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-judge-me
+  label: Judge.me
+  partner: judge-me
+  partner_name: Judge.me
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/judge-me
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Judge.me
+    matched_domain: judge.me
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Judge.me Product Reviews
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-saas-labs
+  label: SaaS Labs
+  partner: justcall
+  partner_name: SaaS Labs
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/justcall
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: SaaS Labs
+    matched_domain: justcall.io
+    matched_by: domain+product
+    listings: 1
+    sample_apps:
+    - JustCall
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-klaus
+  label: Klaus
+  partner: klaus
+  partner_name: Klaus
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/klaus
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Klaus
+    matched_domain: klausapp.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Klaus
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-lokalise-inc
+  label: Lokalise Inc.
+  partner: lokalise
+  partner_name: Lokalise Inc.
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/lokalise-messages
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Lokalise Inc.
+    matched_domain: lokalise.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Lokalise Messages
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-loris-ai
+  label: Loris AI
+  partner: loris
+  partner_name: Loris AI
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/loris
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Loris AI
+    matched_domain: loris.ai
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Loris
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-loyaltylion
+  label: LoyaltyLion
+  partner: loyaltylion
+  partner_name: LoyaltyLion
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/loyaltylion
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: LoyaltyLion
+    matched_domain: loyaltylion.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - LoyaltyLion
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-narvar
+  label: Narvar
+  partner: narvar
+  partner_name: Narvar
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/narvar
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Narvar
+    matched_domain: narvar.com
+    matched_by: domain
+    listings: 2
+    sample_apps:
+    - Narvar
+    - Narvar Return & Exchange
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-okendo
+  label: Okendo
+  partner: okendo
+  partner_name: Okendo
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/okendo
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Okendo
+    matched_domain: okendo.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Okendo
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-omnisend
+  label: Omnisend
+  partner: omnisend
+  partner_name: Omnisend
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/omnisend
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Omnisend
+    matched_domain: omnisend.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Omnisend
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-ortto
+  label: Ortto
+  partner: ortto
+  partner_name: Ortto
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/ortto
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Ortto
+    matched_domain: ortto.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Ortto
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-pandium
+  label: Pandium
+  partner: pandium
+  partner_name: Pandium
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/happy-returns
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Pandium
+    matched_domain: pandium.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Happy Returns, a PayPal company
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-pipedream-inc
+  label: Pipedream, Inc.
+  partner: pipedream
+  partner_name: Pipedream, Inc.
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/pipedream
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Pipedream, Inc.
+    matched_domain: pipedream.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - Pipedream
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-postscript
+  label: Postscript
+  partner: postscript
+  partner_name: Postscript
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/postscript
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Postscript
+    matched_domain: postscript.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Postscript
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-reviews-io
+  label: REVIEWS.io
+  partner: reviews-io
+  partner_name: REVIEWS.io
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/influence-io
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: REVIEWS.io
+    matched_domain: reviews.io
+    matched_by: domain
+    listings: 2
+    sample_apps:
+    - Influence.io
+    - REVIEWS.io
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-ringly
+  label: Ringly
+  partner: ringly
+  partner_name: Ringly
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/ai-phone-support-by-ringly-2
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Ringly
+    matched_domain: ringly.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - AI phone support by Ringly
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-sendcloud
+  label: Sendcloud
+  partner: sendcloud
+  partner_name: Sendcloud
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/sendcloud
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Sendcloud
+    matched_domain: sendcloud.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Sendcloud
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-sendlane
+  label: Sendlane
+  partner: sendlane
+  partner_name: Sendlane
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/sendlane
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Sendlane
+    matched_domain: sendlane.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Sendlane
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-shipbob
+  label: ShipBob
+  partner: shipbob
+  partner_name: ShipBob
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/shipbob
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: ShipBob
+    matched_domain: shipbob.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - ShipBob
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-shipmonk
+  label: ShipMonk
+  partner: shipmonk
+  partner_name: ShipMonk
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/shipmonk
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: ShipMonk
+    matched_domain: shipmonk.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - ShipMonk
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-shogun
+  label: Shogun
+  partner: shogun
+  partner_name: Shogun
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/shogun-frontend
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Shogun
+    matched_domain: getshogun.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Shogun Frontend
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-shopper-approved
+  label: Shopper Approved
+  partner: shopper-approved
+  partner_name: Shopper Approved
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/shopper-approved-reviews
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Shopper Approved
+    matched_domain: shopperapproved.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Shopper Approved Reviews
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-siena-labs-inc
+  label: Siena Labs Inc.
+  partner: siena
+  partner_name: Siena Labs Inc.
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/siena-ai
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Siena Labs Inc.
+    matched_domain: siena.cx
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Siena AI
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-skio
+  label: Skio
+  partner: skio
+  partner_name: Skio
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/skio
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Skio
+    matched_domain: skio.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Skio
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-smartrr
+  label: Smartrr
+  partner: smartrr
+  partner_name: Smartrr
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/smartrr
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Smartrr
+    matched_domain: smartrr.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Smartrr
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-smile
+  label: Smile
+  partner: smile-io
+  partner_name: Smile
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/smile-io
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Smile
+    matched_domain: smile.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Smile
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-stamped-io
+  label: Stamped.io
+  partner: stamped
+  partner_name: Stamped.io
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/stamped-io-reviews-and-ratings
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Stamped.io
+    matched_domain: stamped.io
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Stamped.io Reviews and Ratings
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-stay-ai
+  label: Stay Ai
+  partner: stay-ai
+  partner_name: Stay Ai
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/stay-ai
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Stay Ai
+    matched_domain: stay.ai
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Stay Ai
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-swap
+  label: Swap
+  partner: swap
+  partner_name: Swap
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/swap-returns
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Swap
+    matched_domain: swap-commerce.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Swap Returns
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-syncly
+  label: Syncly
+  partner: syncly
+  partner_name: Syncly
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/syncly
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Syncly
+    matched_domain: syncly.app
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Syncly
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-tapcart
+  label: Tapcart
+  partner: tapcart
+  partner_name: Tapcart
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/tapcart
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Tapcart
+    matched_domain: tapcart.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Tapcart
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-tiktok-shop
+  label: TikTok Shop
+  partner: tiktok-shop
+  partner_name: TikTok Shop
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/tiktok-shop
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: TikTok Shop
+    matched_domain: tiktok.com
+    matched_by: domain+name-among-holders
+    listings: 1
+    sample_apps:
+    - TikTok Shop
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-trackingmore
+  label: TrackingMore
+  partner: trackingmore
+  partner_name: TrackingMore
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/trackingmore
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: TrackingMore
+    matched_domain: trackingmore.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - TrackingMore
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-triple-whale
+  label: Triple Whale
+  partner: triple-whale
+  partner_name: Triple Whale
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/triple-whale
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Triple Whale
+    matched_domain: triplewhale.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Triple Whale
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-truto
+  label: Truto
+  partner: truto
+  partner_name: Truto
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/truto
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Truto
+    matched_domain: truto.one
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Truto
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
+- slug: gorgias-wonderment
+  label: Wonderment
+  partner: wonderment
+  partner_name: Wonderment
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.gorgias.com/apps/wonderment
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: Gorgias App Store (gorgias.com/apps index + sitemap -> app pages)
+    spec_file: null
+    role: gorgias-app
+    registered_name: Wonderment
+    matched_domain: wonderment.com
+    matched_by: domain
+    listings: 1
+    sample_apps:
+    - Wonderment
+    signal_note: one edge per (builder, platform); listings and badges are context, never read
+    detected_by: sweep-customer-support.py
+    detected: '2026-10-19'
+  status: not-a-workflow
+  arazzo: null
