@@ -20,6 +20,7 @@ checked:
 - https://zapier.com/api/v4/apps/
 - https://zapier.com/apps/gorgias/integrations
 - shopify/integrations/shopify-integration-edges.yml
+- adobe-commerce/integrations/adobe-commerce-integration-edges.yml
 summary: null
 marketplace_apps:
 - marketplace: own
@@ -109,24 +110,6 @@ edges:
     property: components.schemas.integrationType
     detected_by: detect-payment-method-edges.py
     detected: '2026-10-12'
-- partner_name: Shopify (own)
-  partner: shopify
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://apps.shopify.com/helpdesk
-  mirror_of: shopify/integrations/shopify-integration-edges.yml
-  apps:
-  - 'Gorgias: AI, Helpdesk & Chat'
-  listing_count: 1
-  detected: '2026-10-15'
-  detected_by: mirror-platform-listings.py
-  publisher_verified:
-  - Built for Shopify
 - partner_name: Ada
   app: Ada
   partner: ada
@@ -1903,6 +1886,41 @@ edges:
   direction: third-party
   category: Facebook
   partner_url: https://www.messenger.com/
+- partner_name: Shopify (own)
+  partner: shopify
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://apps.shopify.com/helpdesk
+  mirror_of: shopify/integrations/shopify-integration-edges.yml
+  apps:
+  - 'Gorgias: AI, Helpdesk & Chat'
+  listing_count: 1
+  detected: '2026-10-15'
+  detected_by: mirror-platform-listings.py
+  publisher_verified:
+  - Built for Shopify
+- partner_name: Adobe Commerce (own)
+  partner: adobe-commerce
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://commercemarketplace.adobe.com/gorgias-module-magento-connect.html
+  mirror_of: adobe-commerce/integrations/adobe-commerce-integration-edges.yml
+  apps:
+  - Gorgias
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Adobe Commerce Marketplace extension
 templates:
 - title: Create tickets in Gorgias for new form responses in Google Forms
   url: https://zapier.com/apps/google-forms/integrations/gorgias/1718563/create-tickets-in-gorgias-for-new-form-responses-in-google-forms
