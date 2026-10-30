@@ -1,4 +1,4 @@
-# Gorgias (gorgias)
+# Gorgias
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,89 +66,158 @@
 
 Gorgias is a customer support and helpdesk platform purpose-built for ecommerce brands, with deep native integrations into Shopify, BigCommerce, Magento, and other commerce stacks to unify email, chat, social, SMS, and voice conversations alongside order data. The platform automates repetitive support tasks with AI agents and macros, surfaces revenue attribution for support interactions, and powers self-service flows on storefronts. The Gorgias REST API provides full CRUD access to tickets, customers, macros, integrations, and widgets using HTTP Basic authentication or OAuth2 for public apps.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/apis.yml)
+**Areas:** Customer Service · Help Desk · E-Commerce · Shopify · Ticketing · Conversations
 
-## Scope
+## Gorgias on APIs.io
 
-- **Type:** Index
+Everything profiled for Gorgias is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/gorgias/](https://apis.io/providers/gorgias/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (14)
 
-- Customer Support
-- Helpdesk
-- Ecommerce
-- Shopify
-- Tickets
-- Conversations
+- [Gorgias Webhooks](https://apis.io/apis/gorgias/webhooks/) — Outbound webhook surface delivered through Gorgias HTTP Integrations. When configured triggers fire on a Gorgias account, Gorgias sends an HTTP request to…
+- [Gorgias Account API](https://apis.io/apis/gorgias/gorgias-account-api/) — The Account API from Gorgias — 2 operation(s) for account.
+- [Gorgias Customers API](https://apis.io/apis/gorgias/gorgias-customers-api/) — The Customers API from Gorgias — 2 operation(s) for customers.
+- [Gorgias Integrations API](https://apis.io/apis/gorgias/gorgias-integrations-api/) — The Integrations API from Gorgias — 2 operation(s) for integrations.
+- [Gorgias Macros API](https://apis.io/apis/gorgias/gorgias-macros-api/) — The Macros API from Gorgias — 2 operation(s) for macros.
+- [Gorgias Messages API](https://apis.io/apis/gorgias/gorgias-messages-api/) — The Messages API from Gorgias — 1 operation(s) for messages.
+- [Gorgias Rules API](https://apis.io/apis/gorgias/gorgias-rules-api/) — The Rules API from Gorgias — 2 operation(s) for rules.
+- [Gorgias Surveys API](https://apis.io/apis/gorgias/gorgias-surveys-api/) — The Surveys API from Gorgias — 1 operation(s) for surveys.
+- [Gorgias Tags API](https://apis.io/apis/gorgias/gorgias-tags-api/) — The Tags API from Gorgias — 3 operation(s) for tags.
+- [Gorgias Teams API](https://apis.io/apis/gorgias/gorgias-teams-api/) — The Teams API from Gorgias — 1 operation(s) for teams.
+- [Gorgias Tickets API](https://apis.io/apis/gorgias/gorgias-tickets-api/) — The Tickets API from Gorgias — 2 operation(s) for tickets.
+- [Gorgias Users API](https://apis.io/apis/gorgias/gorgias-users-api/) — The Users API from Gorgias — 2 operation(s) for users.
+- [Gorgias Views API](https://apis.io/apis/gorgias/gorgias-views-api/) — The Views API from Gorgias — 2 operation(s) for views.
+- [Gorgias Widgets API](https://apis.io/apis/gorgias/gorgias-widgets-api/) — The Widgets API from Gorgias — 2 operation(s) for widgets.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-30
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### AsyncAPI (1)
 
-### Gorgias REST API
+Event-driven and webhook contracts.
 
-REST API for managing tickets, messages, customers, macros, rules, integrations, widgets, and account data inside the Gorgias helpdesk. Authentication uses HTTP Basic with an email and API key for private apps, or OAuth2 for public apps. Requests are scoped to a customer subdomain on gorgias.com.
+- [Gorgias Webhooks (HTTP Integrations)](https://apis.io/asyncapis/gorgias/gorgias-asyncapi/)
 
-- **Human URL:** [https://developers.gorgias.com/reference/introduction](https://developers.gorgias.com/reference/introduction)
-- **Base URL:** `https://{subdomain}.gorgias.com/api`
+#### Event channels (8)
 
-#### Tags
+Individual events and webhooks the provider emits.
 
-- Customer Support
-- Helpdesk
-- Tickets
-- Customers
-- Macros
-- Integrations
+- [ticket-assignment-updated](https://apis.io/channels/gorgias/ticket-assignment-updated/)
+- [ticket-created](https://apis.io/channels/gorgias/ticket-created/)
+- [ticket-handed-over](https://apis.io/channels/gorgias/ticket-handed-over/)
+- [ticket-message-created](https://apis.io/channels/gorgias/ticket-message-created/)
+- [ticket-message-failed](https://apis.io/channels/gorgias/ticket-message-failed/)
+- [ticket-self-unsnoozed](https://apis.io/channels/gorgias/ticket-self-unsnoozed/)
+- [ticket-status-updated](https://apis.io/channels/gorgias/ticket-status-updated/)
+- [ticket-updated](https://apis.io/channels/gorgias/ticket-updated/)
 
-#### Properties
+#### Agentic access (1)
 
-- [Documentation](https://developers.gorgias.com/reference/introduction)
-- [Getting Started](https://developers.gorgias.com/docs)
-- [Authentication](https://developers.gorgias.com/docs/access-tokens-api-keys)
-- [Changelog](https://developers.gorgias.com/changelog)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/openapi/gorgias-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/gorgias.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gorgias.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-### Gorgias Webhooks
+- [Gorgias Agentic Access](https://apis.io/agentic-access/gorgias/gorgias-agentic-access/)
 
-Outbound webhook surface delivered through Gorgias HTTP Integrations. When configured triggers fire on a Gorgias account, Gorgias sends an HTTP request to the URL set on the TicketHttpIntegration, with the request URL, headers, and body rendered from a Jinja-style template that exposes the related ticket, message, and customer context. Supported triggers include ticket-created, ticket-updated, ticket-status-updated, ticket-assignment-updated, ticket-handed-over, ticket-self-unsnoozed, ticket-message-created, and ticket-message-failed.
+#### Collections (14)
 
-- **Human URL:** [https://developers.gorgias.com/reference/the-tickethttpintegration-object](https://developers.gorgias.com/reference/the-tickethttpintegration-object)
+Postman and Open Collection request collections.
 
-#### Tags
+- [Gorgias REST API](https://apis.io/collections/gorgias/open-gorgias/)
+- [Gorgias REST Account API](https://apis.io/collections/gorgias/open-gorgias-account-api/)
+- [Gorgias REST Account Customers API](https://apis.io/collections/gorgias/open-gorgias-customers-api/)
+- [Gorgias REST Account Integrations API](https://apis.io/collections/gorgias/open-gorgias-integrations-api/)
+- [Gorgias REST Account Macros API](https://apis.io/collections/gorgias/open-gorgias-macros-api/)
+- [Gorgias REST Account Messages API](https://apis.io/collections/gorgias/open-gorgias-messages-api/)
+- [Gorgias REST Account Rules API](https://apis.io/collections/gorgias/open-gorgias-rules-api/)
+- [Gorgias REST Account Surveys API](https://apis.io/collections/gorgias/open-gorgias-surveys-api/)
+- [Gorgias REST Account Tags API](https://apis.io/collections/gorgias/open-gorgias-tags-api/)
+- [Gorgias REST Account Teams API](https://apis.io/collections/gorgias/open-gorgias-teams-api/)
+- [Gorgias REST Account Tickets API](https://apis.io/collections/gorgias/open-gorgias-tickets-api/)
+- [Gorgias REST Account Users API](https://apis.io/collections/gorgias/open-gorgias-users-api/)
+- [Gorgias REST Account Views API](https://apis.io/collections/gorgias/open-gorgias-views-api/)
+- [Gorgias REST Account Widgets API](https://apis.io/collections/gorgias/open-gorgias-widgets-api/)
 
-- Webhooks
-- Events
-- HTTP Integration
-- Tickets
-- Messages
+#### Governance rules (1)
 
-#### Properties
+Spectral rulesets for the provider's contracts.
 
-- [Documentation](https://developers.gorgias.com/reference/the-tickethttpintegration-object)
-- [AsyncAPI](https://raw.githubusercontent.com/api-evangelist/gorgias/refs/heads/main/asyncapi/gorgias-asyncapi.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
-- [Postman Collection](collections/gorgias.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gorgias.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Gorgias — asyncapi rules](https://apis.io/rules/gorgias/gorgias-asyncapi-spectral-rules/)
 
-## Common Properties
+#### Security (3)
 
-- [GitHub Organization](https://github.com/gorgias)
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Gorgias Authentication](https://apis.io/security/gorgias/gorgias-authentication/)
+- [Gorgias Domain Security](https://apis.io/security/gorgias/gorgias-domain-security/)
+- [Gorgias Vulnerability Disclosure](https://apis.io/security/gorgias/gorgias-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Gorgias Scopes](https://apis.io/scopes/gorgias/gorgias-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.gorgias.com)
 - [Documentation](https://developers.gorgias.com)
-- [Help  Center](https://docs.gorgias.com/en-US)
 - [Pricing](https://www.gorgias.com/pricing)
-- [Sign Up](https://www.gorgias.com/signup)
-- [Status Page](https://status.gorgias.com)
 - [Changelog](https://developers.gorgias.com/changelog)
-- [LinkedIn](https://www.linkedin.com/company/gorgiasio)
-- [L L Ms Txt](https://developers.gorgias.com/llms.txt)
+- [Blog](https://www.gorgias.com/blog)
+- [GitHub](https://github.com/gorgias)
+- [Status](https://status.gorgias.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 38.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 53.0 |
+| Contract governance | 11.4 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 23.7 |
+
+**Agent readiness 23.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 27.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/gorgias/](https://apis.io/providers/gorgias/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Gorgias: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/gorgias/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
